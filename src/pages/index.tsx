@@ -14,19 +14,19 @@ const Home: NextPage = () => {
             <h1 className="w-8/12 text-center text-4xl font-semibold leading-tight tracking-tight sm:text-[5rem]">
               Make short videos from long ones instantly
             </h1>
-            <p className="mb-6 mt-4 text-lg text-gray-500">
+            <p className="mb-6 mt-4 text-base font-medium text-gray-400">
               Create social ready short clips from your long videos with AI 🌟
               Save 90% time and effort
             </p>
             <div>
-              <button className="mr-3 h-12 rounded-3xl bg-black px-6 py-[6px] text-white">
+              <button className="mr-3 h-12 rounded-3xl bg-black px-6 py-[6px] font-medium text-white">
                 Start for free ➡️
               </button>
-              <button className="h-12 rounded-3xl border border-gray-400 bg-transparent px-6 py-[6px]">
+              <button className="h-12 rounded-3xl border border-gray-400 bg-transparent px-4 py-[6px] font-medium">
                 Play demo video ▶️
               </button>
             </div>
-            <p className="text-gray-500">
+            <p className="text-[1rem] font-medium text-gray-500">
               Get 75 mins of upload for free every month
             </p>
             <div id="hero-footer" className="mt-24 w-full">
@@ -44,13 +44,61 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        {/* <section id="how-it-works">
-          <h2>How it works?</h2>
-          <p>
+        <section
+          id="how-it-works"
+          className="w-full bg-gray-100 px-24 py-28 text-center"
+        >
+          <h2 className="mb-8 text-4xl font-medium sm:text-[3.5rem]">
+            How it works?
+          </h2>
+          <p className="mb-16 text-base text-gray-500">
             vidyo.ai automatically selects, edits & captions top moments from
             your videos
           </p>
-        </section> */}
+          <div id="cards-section" className="flex justify-between gap-8">
+            <div
+              id="card"
+              className="h-[450px] w-full overflow-hidden rounded-3xl"
+            >
+              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+              <div className="h-full w-full bg-white p-8">
+                <h3 className="mb-2 text-xl font-medium">Import your Video</h3>
+                <p className="text-gray-500">
+                  Upload a video from your computer or use a YouTube link
+                </p>
+              </div>
+            </div>
+            <div
+              id="card"
+              className="h-[450px] w-full overflow-hidden rounded-3xl"
+            >
+              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+              <div className="h-full w-full bg-white p-8">
+                <h3 className="mb-2 text-xl font-medium">
+                  Set Your Preferences
+                </h3>
+                <p className="text-gray-500">
+                  Tell us your requirements for platforms, formats, & templates
+                </p>
+              </div>
+            </div>
+            <div
+              id="card"
+              className="h-[450px] w-full overflow-hidden rounded-3xl"
+            >
+              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+              <div className="h-full w-full bg-white p-8">
+                <h3 className="mb-2 text-xl font-medium">
+                  Get Your Videos In Minutes
+                </h3>
+                <p className="text-gray-500">
+                  Customize short videos with our AI - change colors, fonts,
+                  subtitles, and more
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );
