@@ -5,14 +5,20 @@ interface IHeader extends React.PropsWithChildren<any> {}
 
 const Header: React.FC<IHeader> = () => {
   return (
-    <header className="h-20 bg-slate-300 px-20 py-4">
+    <header className="fixed z-10 h-20 w-full bg-transparent px-20 py-4">
       <nav className="flex items-center justify-between">
         <div
           id="header-logo"
           className="flex items-center gap-3 text-[26px] font-semibold"
         >
           <a href="/">
-            <Image src="/logo.png" alt="company logo" width="25" height="25" />
+            <Image
+              className="rounded-3xl"
+              src="/logo.png"
+              alt="company logo"
+              width="30"
+              height="30"
+            />
           </a>
           <a href="/">vidyo.ai</a>
         </div>
