@@ -9,5 +9,8 @@ export default {
       },
     },
   },
-  plugins: [require('./src/plugins/openVariant')],
+  plugins: [
+    require('./src/plugins/openVariant'),
+    require('./src/plugins/scrollbarHide'),
+  ],
 } satisfies Config;

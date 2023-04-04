@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply h-full overflow-x-hidden;
+  @apply h-full overflow-x-hidden scrollbar-hide;
 }
 
 #__next {
