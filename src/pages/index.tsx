@@ -103,9 +103,11 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section id="content-creation" className="w-full px-24 py-28 ">
-          <div className="flex">
-            <article>
-              <h1>Create amazing content with AI Technology</h1>
+          <div className="mb-20 flex">
+            <article className="grow">
+              <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
+                Create amazing content with AI technology
+              </h1>
               <p>
                 AI opens up various opportunities to improve video quality to
                 make it more interesting, information and memorable.
@@ -119,92 +121,96 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </article>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1613633043968-e4ffc82d241b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            <div className="grow">
+              <Image
+                src="/images/content-placeholder.jpg"
                 alt="placeholder"
+                width="450"
+                height="400"
               />
             </div>
           </div>
           <div>
-            <article>
-              <h1>Amazing features that you can use now</h1>
+            <article className="text-center">
+              <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
+                Amazing features that you can use now
+              </h1>
               <p>
                 Don't miss the chance to try out this amazing, easy-to-use
                 feature! You can use it directly and easily, without having
                 special technical skills.
               </p>
-              <div id="feature-cards" className="flex">
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Video Resizing</h2>
-                  <p>Get platform native sizes for videos</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Video Clipping</h2>
-                  <p>Get most interesting parts of videos magically</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Auto-video Chapters</h2>
-                  <p>Get chapter timestamps for better descriptions</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Social Media Templates</h2>
-                  <p>
-                    High performing & visually appealing looks for your videos
-                  </p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>1080p Downloads</h2>
-                  <p>Better quality for your video content</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Auto-video Captioning</h2>
-                  <p>Captions improve video performance by 40%</p>
-                </div>
-              </div>
             </article>
+            <div id="feature-cards" className="flex">
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>Video Resizing</h2>
+                <p>Get platform native sizes for videos</p>
+              </div>
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>Video Clipping</h2>
+                <p>Get most interesting parts of videos magically</p>
+              </div>
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>Auto-video Chapters</h2>
+                <p>Get chapter timestamps for better descriptions</p>
+              </div>
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>Social Media Templates</h2>
+                <p>
+                  High performing & visually appealing looks for your videos
+                </p>
+              </div>
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>1080p Downloads</h2>
+                <p>Better quality for your video content</p>
+              </div>
+              <div id="feature-card">
+                <Image
+                  className="rounded-3xl"
+                  src="/logo.png"
+                  alt="company logo"
+                  width="30"
+                  height="30"
+                />
+                <h2>Auto-video Captioning</h2>
+                <p>Captions improve video performance by 40%</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
