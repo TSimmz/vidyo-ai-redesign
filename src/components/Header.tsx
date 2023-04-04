@@ -45,7 +45,7 @@ const Header: React.FC<IHeader> = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className="flex h-full cursor-pointer items-center px-4 hover:bg-zinc-500/10"
+              className="flex h-full cursor-pointer items-center px-4 text-lg hover:bg-zinc-500/10"
             >
               {link.text}
             </li>
@@ -53,13 +53,13 @@ const Header: React.FC<IHeader> = () => {
         </ul>
         <div id="header-cta" className="flex items-center gap-3 font-semibold">
           <button
-            className={`box-border w-28 rounded-3xl bg-white px-4 py-[6px] transition-all duration-[250ms] ease-in-out ${
+            className={`box-border rounded-3xl bg-white px-6 py-2 transition-all duration-[250ms] ease-in-out ${
               isPageScrolled ? 'border-2 border-zinc-500' : ''
-            }`}
+            } hover:bg-zinc-200`}
           >
             LOGIN
           </button>
-          <button className="w-28 rounded-3xl bg-black px-5 py-[6px] text-white">
+          <button className="rounded-3xl bg-black px-6 py-2 text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
             SIGN UP
           </button>
         </div>
