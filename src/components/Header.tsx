@@ -45,16 +45,28 @@ const Header: React.FC<IHeader> = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className="flex h-full cursor-pointer items-center px-4 text-lg hover:bg-zinc-500/10"
+              className="group relative flex h-full items-center px-4 text-lg hover:bg-gradient-to-b hover:from-zinc-500/20 hover:to-transparent hover:underline"
             >
-              {link.text}
+              <span className="cursor-pointer">{link.text}</span>
+              {link.subLinks ? (
+                <ul className="absolute left-0 top-full hidden overflow-hidden whitespace-nowrap rounded-b-lg bg-white  group-hover:block">
+                  {link.subLinks.map((subLink) => (
+                    <li
+                      key={subLink.id}
+                      className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
+                    >
+                      <span>{subLink.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           ))}
         </ul>
         <div id="header-cta" className="flex items-center gap-3 font-semibold">
           <button
             className={`box-border rounded-3xl bg-white px-6 py-2 transition-all duration-[250ms] ease-in-out ${
-              isPageScrolled ? 'border-2 border-zinc-500' : ''
+              isPageScrolled ? 'drop-shadow-lg' : ''
             } hover:bg-zinc-200`}
           >
             LOGIN

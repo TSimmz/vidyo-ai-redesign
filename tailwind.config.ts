@@ -9,5 +9,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('./src/plugins/openVariant')],
 } satisfies Config;
