@@ -12,8 +12,13 @@ const Header: React.FC<IHeader> = () => {
     setIsPageScrolled(window.scrollY >= 80);
   };
 
+  const updatedMobileMenuState = () => {
+    if (window.innerWidth >= 1024) setMobileMenuState(false);
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', updatePageScrolledStatus);
+    window.addEventListener('resize', updatedMobileMenuState);
   }, []);
 
   useEffect(() => {
@@ -39,7 +44,7 @@ const Header: React.FC<IHeader> = () => {
           : 'h-20 bg-transparent'
       } transition-all duration-500 ease-in-out`}
     >
-      <nav className="flex h-full w-full items-center justify-between px-12 lg:px-20 ">
+      <nav className="sticky flex h-full w-full items-center justify-between px-12 lg:px-20 ">
         {/* ===================== Header Logo and Text ===================== */}
         <div
           id="header-logo"
@@ -59,15 +64,47 @@ const Header: React.FC<IHeader> = () => {
 
         {/* ===================== Mobile Nav Menu ===================== */}
         <div className="relative block h-full cursor-pointer lg:hidden">
+          {/* Hamburger button */}
           <button
             id="mobile-menu-button"
-            className="group peer h-full"
+            className="group h-full"
             onClick={handleMobileButtonPress}
           >
             <div className="relative top-0 h-1 w-8 rounded-full bg-black transition-all group-open:top-2 group-open:rotate-45"></div>
             <div className="mt-1 h-1 w-8 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
             <div className="relative top-0 mt-1 h-1 w-8 rounded-full bg-black transition-all group-open:-top-2 group-open:-rotate-45"></div>
           </button>
+
+          {/* Aside menu */}
+          {mobileMenuState === true ? (
+            <aside className="absolute right-[-3rem] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white/95 text-lg drop-shadow-lg md:w-[60vw] ">
+              <ul
+                id="mobile-navlinks"
+                className="flex w-full flex-col items-center font-semibold"
+              >
+                {navLinks.map((link) => (
+                  <li
+                    key={link.id}
+                    className="group relative flex h-full w-full flex-col items-center py-3 transition-colors duration-[250ms] ease-in-out marker:text-lg hover:bg-zinc-400/10 "
+                  >
+                    <span className="cursor-pointer">{link.text}</span>
+                    {link.subLinks ? (
+                      <ul className="mt-3 hidden w-full whitespace-nowrap text-center font-normal group-hover:block">
+                        {link.subLinks.map((subLink) => (
+                          <li
+                            key={subLink.id}
+                            className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
+                          >
+                            <span>{subLink.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          ) : null}
         </div>
 
         {/* ===================== Desktop Nav Links ===================== */}
@@ -78,11 +115,11 @@ const Header: React.FC<IHeader> = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className="group relative flex h-full items-center px-3 text-lg hover:bg-gradient-to-b hover:from-zinc-500/20 hover:to-transparent hover:underline lg:px-4"
+              className="group relative flex h-full items-center px-3 text-lg hover:bg-gradient-to-b hover:from-zinc-400/20 hover:to-transparent hover:underline lg:px-4"
             >
               <span className="cursor-pointer">{link.text}</span>
               {link.subLinks ? (
-                <ul className="absolute left-0 top-full hidden overflow-hidden whitespace-nowrap rounded-b-lg bg-white  drop-shadow-md group-hover:block">
+                <ul className="absolute left-0 top-full hidden overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal drop-shadow-md group-hover:block">
                   {link.subLinks.map((subLink) => (
                     <li
                       key={subLink.id}
