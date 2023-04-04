@@ -5,4 +5,4 @@ const openVariant = plugin(function ({ addVariant }: any) {
   addVariant('peer-open', ':merge(.peer).open ~ &');
 });
 
-module.exports = openVariant;
+export default openVariant;

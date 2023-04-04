@@ -33,4 +33,4 @@ const scrollbarHide = plugin(function ({ addUtilities }: any) {
   );
 });
 
-module.exports = scrollbarHide;
+export default scrollbarHide;
