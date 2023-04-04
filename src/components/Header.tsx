@@ -22,9 +22,10 @@ const Header: React.FC<IHeader> = () => {
           : 'h-20 bg-transparent'
       } transition-all duration-500 ease-in-out`}
     >
+      <nav className="flex h-full w-full items-center justify-between px-20 ">
         <div
           id="header-logo"
-          className="flex items-center gap-3 text-[26px] font-semibold"
+          className="flex items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.05]"
         >
           <a href="/">
             <Image
@@ -37,9 +38,17 @@ const Header: React.FC<IHeader> = () => {
           </a>
           <a href="/">vidyo.ai</a>
         </div>
-        <ul id="desktop-navlinks" className="flex gap-8 font-semibold">
+        <ul
+          id="desktop-navlinks"
+          className="flex h-full items-center font-semibold"
+        >
           {navLinks.map((link) => (
-            <li>{link.text}</li>
+            <li
+              key={link.id}
+              className="flex h-full cursor-pointer items-center px-4 hover:bg-zinc-500/10"
+            >
+              {link.text}
+            </li>
           ))}
         </ul>
         <div id="header-cta" className="flex items-center gap-3 font-semibold">
