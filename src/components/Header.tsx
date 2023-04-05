@@ -39,9 +39,7 @@ const Header: React.FC<IHeader> = () => {
   return (
     <header
       className={`fixed z-10 flex w-full items-center ${
-        isPageScrolled
-          ? 'h-16 bg-white/95 drop-shadow-md'
-          : 'h-20 bg-transparent'
+        isPageScrolled ? 'h-16 bg-white drop-shadow-md' : 'h-20 bg-transparent'
       } transition-all duration-500 ease-in-out`}
     >
       <nav className="sticky flex h-full w-full items-center justify-between px-12 lg:px-20 ">
@@ -77,7 +75,7 @@ const Header: React.FC<IHeader> = () => {
 
           {/* Aside menu */}
           {mobileMenuState === true ? (
-            <aside className="absolute right-[-3rem] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white/95 text-lg drop-shadow-lg md:w-[60vw] ">
+            <aside className="absolute right-[-3rem] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white text-lg drop-shadow-lg md:w-[60vw] ">
               <ul
                 id="mobile-navlinks"
                 className="flex w-full flex-col items-center font-semibold"
@@ -119,7 +117,7 @@ const Header: React.FC<IHeader> = () => {
             >
               <span className="cursor-pointer">{link.text}</span>
               {link.subLinks ? (
-                <ul className="absolute left-0 top-full hidden overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal drop-shadow-md group-hover:block">
+                <ul className="absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal drop-shadow-md group-hover:block">
                   {link.subLinks.map((subLink) => (
                     <li
                       key={subLink.id}
