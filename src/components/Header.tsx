@@ -42,7 +42,7 @@ const Header: React.FC<IHeader> = () => {
         isPageScrolled ? 'h-16 bg-white drop-shadow-md' : 'h-20 bg-transparent'
       } transition-all duration-500 ease-in-out`}
     >
-      <nav className="sticky flex h-full w-full items-center justify-between px-12 lg:px-20 ">
+      <nav className="sticky flex h-full w-full items-center justify-between px-5 md:px-12 lg:px-20 ">
         {/* ===================== Header Logo and Text ===================== */}
         <div
           id="header-logo"
@@ -75,7 +75,7 @@ const Header: React.FC<IHeader> = () => {
 
           {/* Aside menu */}
           {mobileMenuState === true ? (
-            <aside className="absolute right-[-3rem] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white text-lg drop-shadow-lg md:w-[60vw] ">
+            <aside className="absolute right-[-20px] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white text-lg drop-shadow-lg md:right-[-3rem] md:w-[60vw] ">
               <ul
                 id="mobile-navlinks"
                 className="flex w-full flex-col items-center font-semibold"

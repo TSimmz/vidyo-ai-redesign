@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           className="relative flex h-[calc(100vh-100px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
         >
           <div className="container flex flex-col items-center justify-center gap-4 py-20">
-            <h1 className="whitespace-nowrap text-center text-5xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl">
+            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl">
               <span>Make short videos from</span>
               <br />
               <span>long ones instantly</span>
