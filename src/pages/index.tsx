@@ -15,8 +15,11 @@ import {
 const Home: NextPage = () => {
   return (
     <Layout>
+      {/* ===================== Header ===================== */}
       <Header />
+
       <main className="flex min-h-screen flex-col items-center bg-white">
+        {/* ===================== Hero Section ===================== */}
         <section
           id="hero-section"
           className="relative flex h-[calc(100vh-50px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
@@ -90,6 +93,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+
+        {/* ===================== How It Works Section ===================== */}
         <section
           id="how-it-works"
           className="w-full bg-gray-100 px-24 py-28 text-center"
@@ -147,6 +152,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+
+        {/* ===================== Content Creation Section ===================== */}
         <section id="content-creation" className="w-full px-24 py-28 ">
           <div className="mb-20 flex">
             <article className="grow">
@@ -258,6 +265,24 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+
+        {/* ===================== Who Can Use Section ===================== */}
+        <section></section>
+
+        {/* ===================== Social Media Growth Section ===================== */}
+        <section></section>
+
+        {/* ===================== Testimonial Section ===================== */}
+        <section></section>
+
+        {/* ===================== FAQ Section ===================== */}
+        <section></section>
+
+        {/* ===================== Community Section ===================== */}
+        <section></section>
+
+        {/* ===================== Footer ===================== */}
+        <footer></footer>
       </main>
     </Layout>
   );
