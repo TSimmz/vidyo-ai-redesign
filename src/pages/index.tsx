@@ -19,10 +19,10 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col items-center bg-white">
         <section
           id="hero-section"
-          className="relative flex h-[calc(100vh-100px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
+          className="relative flex h-[calc(100vh-50px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
         >
-          <div className="container flex flex-col items-center justify-center gap-4 py-20">
-            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl">
+          <div className="container mt-20 flex flex-col items-center justify-center gap-4">
+            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
               <span>Make short videos from</span>
               <br />
               <span>long ones instantly</span>
