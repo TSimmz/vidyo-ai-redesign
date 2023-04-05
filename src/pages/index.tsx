@@ -31,10 +31,10 @@ const Home: NextPage = () => {
               <span>long ones instantly</span>
             </h1>
             <div className="mb-6 mt-8 text-center">
-              <p className="mb-2 text-sm font-medium text-black transition-all duration-[250ms] ease-linear md:text-base">
+              <p className="mb-2 text-sm font-medium text-zinc-700 transition-all duration-[250ms] ease-linear md:text-base ">
                 Create social ready short clips from your long videos with AI{' '}
               </p>
-              <p className=" text-sm font-medium text-black transition-all duration-[250ms] ease-linear md:text-base">
+              <p className=" text-sm font-medium text-zinc-700 transition-all duration-[250ms] ease-linear md:text-base">
                 <span>
                   <IconSparkles size="1rem" className="inline text-rose-400" />
                 </span>{' '}
@@ -60,11 +60,11 @@ const Home: NextPage = () => {
                 />
               </button>
             </div>
-            <p className="font-medium">
+            <p className="font-medium text-zinc-700">
               Get 75 mins of upload for free every month
             </p>
             <div id="hero-footer" className="mt-24 w-full">
-              <p className="text-center text-sm font-medium md:text-base">
+              <p className="text-center text-sm font-medium text-zinc-700 md:text-base">
                 Make VIRAL short clips with captions, templates, emojis 🤩 &
                 more for
               </p>
@@ -97,57 +97,65 @@ const Home: NextPage = () => {
         {/* ===================== How It Works Section ===================== */}
         <section
           id="how-it-works"
-          className="w-full bg-gray-100 px-24 py-28 text-center"
+          className="relative w-full bg-gradient-to-b from-zinc-50/10 to-rose-50 p-8 lg:p-16"
         >
-          <article>
-            <h2 className="mb-8 text-4xl font-medium sm:text-[3.5rem]">
-              How it works?
-            </h2>
-            <p className="mb-16 text-base text-gray-500">
-              vidyo.ai automatically selects, edits & captions top moments from
-              your videos
-            </p>
-          </article>
-          <div id="cards-section" className="flex justify-between gap-8">
+          <div className="mx-auto mt-20 max-w-screen-xl text-center">
+            <article>
+              <h2 className="text-4xl font-medium transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
+                How it works?
+              </h2>
+              <p className="mt-4 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
+                vidyo.ai automatically selects, edits & captions top moments
+                from your videos
+              </p>
+            </article>
             <div
-              id="card"
-              className="h-[450px] w-full overflow-hidden rounded-3xl"
+              id="cards-section"
+              className="mt-8 flex flex-col justify-between gap-8 px-4 md:px-20 lg:mt-20 lg:flex-row lg:px-0"
             >
-              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
-              <div className="h-full w-full bg-white p-8">
-                <h3 className="mb-2 text-xl font-medium">Import your Video</h3>
-                <p className="text-gray-500">
-                  Upload a video from your computer or use a YouTube link
-                </p>
+              <div
+                id="card"
+                className="w-full min-w-[60%] overflow-hidden rounded-3xl md:min-w-[20%]"
+              >
+                <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+                <div className="h-full w-full bg-white p-8">
+                  <h3 className="mb-2 text-xl font-medium">
+                    Import your Video
+                  </h3>
+                  <p className="text-zinc-700">
+                    Upload a video from your computer or use a YouTube link
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              id="card"
-              className="h-[450px] w-full overflow-hidden rounded-3xl"
-            >
-              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
-              <div className="h-full w-full bg-white p-8">
-                <h3 className="mb-2 text-xl font-medium">
-                  Set Your Preferences
-                </h3>
-                <p className="text-gray-500">
-                  Tell us your requirements for platforms, formats, & templates
-                </p>
+              <div
+                id="card"
+                className="w-full min-w-[80%] overflow-hidden rounded-3xl md:min-w-[20%]"
+              >
+                <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+                <div className="h-full w-full bg-white p-8">
+                  <h3 className="mb-2 text-xl font-medium">
+                    Set Your Preferences
+                  </h3>
+                  <p className="text-zinc-700">
+                    Tell us your requirements for platforms, formats, &
+                    templates
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              id="card"
-              className="h-[450px] w-full overflow-hidden rounded-3xl"
-            >
-              <div className="h-3/5 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
-              <div className="h-full w-full bg-white p-8">
-                <h3 className="mb-2 text-xl font-medium">
-                  Get Your Videos In Minutes
-                </h3>
-                <p className="text-gray-500">
-                  Customize short videos with our AI - change colors, fonts,
-                  subtitles, and more
-                </p>
+              <div
+                id="card"
+                className="w-full min-w-[80%] overflow-hidden rounded-3xl md:min-w-[20%]"
+              >
+                <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
+                <div className="h-full w-full bg-white p-8">
+                  <h3 className="mb-2 text-xl font-medium">
+                    Get Your Videos In Minutes
+                  </h3>
+                  <p className="text-zinc-700">
+                    Customize short videos with our AI - change colors, fonts,
+                    subtitles, and more
+                  </p>
+                </div>
               </div>
             </div>
           </div>
