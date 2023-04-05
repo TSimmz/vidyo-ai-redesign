@@ -45,14 +45,14 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className="mb-2">
-              <button className="mr-3 cursor-pointer rounded-full bg-black px-6 py-3 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
+              <button className="mr-3 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
                 <span className="mr-2">Start for free</span>
                 <IconArrowRight
                   size="20"
                   className="relative -top-[1px] inline"
                 />
               </button>
-              <button className="rounded-full border-2 border-gray-400 bg-transparent px-6 py-3 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-pink-200/50">
+              <button className="rounded-full border-2 border-gray-400 bg-transparent py-3 pl-5 pr-4 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-200/40">
                 <span className="mr-2">Play demo video</span>
                 <IconPlayerPlay
                   size="20"
@@ -99,9 +99,9 @@ const Home: NextPage = () => {
           id="how-it-works"
           className="relative w-full bg-gradient-to-b from-zinc-50/10 to-rose-50 p-8 lg:p-16"
         >
-          <div className="mx-auto mt-20 max-w-screen-xl text-center">
+          <div className="mx-auto mt-8 max-w-screen-xl text-center lg:mt-20">
             <article>
-              <h2 className="text-4xl font-medium transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
                 How it works?
               </h2>
               <p className="mt-4 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
@@ -162,113 +162,123 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Content Creation Section ===================== */}
-        <section id="content-creation" className="w-full px-24 py-28 ">
-          <div className="mb-20 flex">
-            <article className="grow">
-              <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
-                Create amazing content with AI technology
-              </h1>
-              <p>
-                AI opens up various opportunities to improve video quality to
-                make it more interesting, information and memorable.
-              </p>
-              <div>
-                <button className="mr-3 h-12 rounded-3xl bg-black px-6 py-[6px] font-medium text-white">
-                  Start for free ➡️
-                </button>
-                <button className="h-12 rounded-3xl border border-gray-400 bg-transparent px-4 py-[6px] font-medium">
-                  Learn More
-                </button>
-              </div>
-            </article>
-            <div className="grow">
-              <Image
-                src="/images/content-placeholder.jpg"
-                alt="placeholder"
-                width="450"
-                height="400"
-              />
-            </div>
-          </div>
-          <div>
-            <article className="text-center">
-              <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
-                Amazing features that you can use now
-              </h1>
-              <p>
-                Don't miss the chance to try out this amazing, easy-to-use
-                feature! You can use it directly and easily, without having
-                special technical skills.
-              </p>
-            </article>
-            <div id="feature-cards" className="flex">
-              <div id="feature-card">
-                <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
-                />
-                <h2>Video Resizing</h2>
-                <p>Get platform native sizes for videos</p>
-              </div>
-              <div id="feature-card">
-                <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
-                />
-                <h2>Video Clipping</h2>
-                <p>Get most interesting parts of videos magically</p>
-              </div>
-              <div id="feature-card">
-                <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
-                />
-                <h2>Auto-video Chapters</h2>
-                <p>Get chapter timestamps for better descriptions</p>
-              </div>
-              <div id="feature-card">
-                <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
-                />
-                <h2>Social Media Templates</h2>
-                <p>
-                  High performing & visually appealing looks for your videos
+        <section
+          id="content-creation"
+          className="relative w-full bg-gradient-to-b from-rose-50 to-zinc-50/10 p-8 lg:p-16"
+        >
+          <div className="mx-auto mt-4 max-w-screen-xl text-center">
+            <div className="flex xl:gap-8 lg-max:flex-col">
+              <article className="flex-1 text-left lg:py-16 lg-max:pt-16 lg-max:text-center">
+                <h1 className="mb-4 whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
+                  <span className="mb-4 block">Create amazing content</span>
+                  <span> with AI technology</span>
+                </h1>
+                <p className=" text-zinc-700 xl:text-lg">
+                  AI opens up various opportunities to improve video quality to
+                  make it more interesting, information and memorable.
                 </p>
-              </div>
-              <div id="feature-card">
+                <div className="mt-12 flex items-center lg-max:justify-center">
+                  <button className="mr-3 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
+                    <span className="mr-2">Start for free</span>
+                    <IconArrowRight
+                      size="20"
+                      className="relative -top-[1px] inline"
+                    />
+                  </button>
+                  <button className="rounded-full border border-gray-400 bg-transparent px-8 py-3 text-center font-medium transition-all duration-[250ms] ease-in-out hover:bg-rose-200/40">
+                    Learn More
+                  </button>
+                </div>
+              </article>
+              <div className="relative flex-grow lg-max:min-h-[450px]">
                 <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
+                  src="/images/content-graphic.png"
+                  alt="content graphic"
+                  fill
+                  className="object-contain"
                 />
-                <h2>1080p Downloads</h2>
-                <p>Better quality for your video content</p>
               </div>
-              <div id="feature-card">
-                <Image
-                  className="rounded-3xl"
-                  src="/logo.png"
-                  alt="company logo"
-                  width="30"
-                  height="30"
-                />
-                <h2>Auto-video Captioning</h2>
-                <p>Captions improve video performance by 40%</p>
+            </div>
+            <div className="mx-auto mt-4 max-w-screen-xl text-center">
+              <article className="text-center">
+                <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
+                  Amazing features that you can use now
+                </h1>
+                <p>
+                  Don't miss the chance to try out this amazing, easy-to-use
+                  feature! You can use it directly and easily, without having
+                  special technical skills.
+                </p>
+              </article>
+              <div id="feature-cards" className="flex">
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>Video Resizing</h2>
+                  <p>Get platform native sizes for videos</p>
+                </div>
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>Video Clipping</h2>
+                  <p>Get most interesting parts of videos magically</p>
+                </div>
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>Auto-video Chapters</h2>
+                  <p>Get chapter timestamps for better descriptions</p>
+                </div>
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>Social Media Templates</h2>
+                  <p>
+                    High performing & visually appealing looks for your videos
+                  </p>
+                </div>
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>1080p Downloads</h2>
+                  <p>Better quality for your video content</p>
+                </div>
+                <div id="feature-card">
+                  <Image
+                    className="rounded-3xl"
+                    src="/logo.png"
+                    alt="company logo"
+                    width="30"
+                    height="30"
+                  />
+                  <h2>Auto-video Captioning</h2>
+                  <p>Captions improve video performance by 40%</p>
+                </div>
               </div>
             </div>
           </div>
