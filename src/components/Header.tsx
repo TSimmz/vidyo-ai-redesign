@@ -2,6 +2,10 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
 
+const MEDIUM_SCREEN_WIDTH = 1024;
+const MD_SCROLL_DISTANCE = 80;
+const SM_SCROLL_DISTANCE = 40;
+
 interface IHeader extends React.PropsWithChildren<any> {}
 
 const Header: React.FC<IHeader> = () => {
@@ -9,11 +13,15 @@ const Header: React.FC<IHeader> = () => {
   const [mobileMenuState, setMobileMenuState] = useState(false);
 
   const updatePageScrolledStatus = () => {
-    setIsPageScrolled(window.scrollY >= 80);
+    let scrollThreshold =
+      window.innerWidth >= MEDIUM_SCREEN_WIDTH
+        ? MD_SCROLL_DISTANCE
+        : SM_SCROLL_DISTANCE;
+    setIsPageScrolled(window.scrollY >= scrollThreshold);
   };
 
   const updatedMobileMenuState = () => {
-    if (window.innerWidth >= 1024) setMobileMenuState(false);
+    if (window.innerWidth >= MEDIUM_SCREEN_WIDTH) setMobileMenuState(false);
   };
 
   useEffect(() => {
