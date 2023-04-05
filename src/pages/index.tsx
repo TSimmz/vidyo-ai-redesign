@@ -1,6 +1,16 @@
 import { type NextPage } from 'next';
 import { Layout, Header } from '~/components';
 import Image from 'next/image';
+import {
+  IconSparkles,
+  IconArrowRight,
+  IconPlayerPlay,
+  IconBrandTiktok,
+  IconBrandInstagram,
+  IconBrandYoutube,
+  IconBrandLinkedin,
+  IconBrandFacebook,
+} from '@tabler/icons-react';
 
 const Home: NextPage = () => {
   return (
@@ -9,38 +19,73 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col items-center bg-white">
         <section
           id="hero-section"
-          className="relative h-screen w-full bg-hero-pattern bg-cover bg-center bg-no-repeat"
+          className="relative flex h-[calc(100vh-50px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
         >
-          <div className="container mx-auto mt-20 flex flex-col items-center justify-center gap-4 py-20">
-            <h1 className="w-8/12 text-center text-4xl font-semibold leading-tight tracking-tight sm:text-[5rem]">
-              Make short videos from long ones instantly
+          <div className="container mt-20 flex flex-col items-center justify-center gap-4">
+            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
+              <span>Make short videos from</span>
+              <br />
+              <span>long ones instantly</span>
             </h1>
-            <p className="mb-6 mt-4 text-base font-medium text-gray-400">
-              Create social ready short clips from your long videos with AI 🌟
-              Save 90% time and effort
-            </p>
-            <div>
-              <button className="mr-3 h-12 rounded-3xl bg-black px-6 py-[6px] font-medium text-white">
-                Start for free ➡️
+            <div className="mb-6 mt-8 text-center">
+              <p className="mb-2 text-sm font-medium text-black transition-all duration-[250ms] ease-linear md:text-base">
+                Create social ready short clips from your long videos with AI{' '}
+              </p>
+              <p className=" text-sm font-medium text-black transition-all duration-[250ms] ease-linear md:text-base">
+                <span>
+                  <IconSparkles size="1rem" className="inline text-rose-400" />
+                </span>{' '}
+                Save 90% time and effort{' '}
+                <span>
+                  <IconSparkles size="1rem" className="inline text-rose-400" />
+                </span>{' '}
+              </p>
+            </div>
+            <div className="mb-2">
+              <button className="mr-3 cursor-pointer rounded-full bg-black px-6 py-3 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
+                <span className="mr-2">Start for free</span>
+                <IconArrowRight
+                  size="20"
+                  className="relative -top-[1px] inline"
+                />
               </button>
-              <button className="h-12 rounded-3xl border border-gray-400 bg-transparent px-4 py-[6px] font-medium">
-                Play demo video ▶️
+              <button className="rounded-full border-2 border-gray-400 bg-transparent px-6 py-3 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-pink-200/50">
+                <span className="mr-2">Play demo video</span>
+                <IconPlayerPlay
+                  size="20"
+                  className="relative -top-[1px] inline"
+                />
               </button>
             </div>
-            <p className="text-[1rem] font-medium text-gray-500">
+            <p className="font-medium">
               Get 75 mins of upload for free every month
             </p>
             <div id="hero-footer" className="mt-24 w-full">
-              <p className="text-center text-gray-600">
+              <p className="text-center text-sm font-medium md:text-base">
                 Make VIRAL short clips with captions, templates, emojis 🤩 &
                 more for
               </p>
-              <div id="social-logos" className="mt-12 flex justify-evenly">
-                <p>TikTok</p>
-                <p>Instagram</p>
-                <p>YouTube</p>
-                <p>LinkedIn</p>
-                <p>FaceBook</p>
+              <div id="social-logos" className="mt-4 flex justify-evenly ">
+                <IconBrandTiktok
+                  size="50"
+                  className="text-rose-500 drop-shadow-md"
+                />
+                <IconBrandInstagram
+                  size="50"
+                  className="text-rose-500 drop-shadow-md"
+                />
+                <IconBrandYoutube
+                  size="50"
+                  className="text-rose-500 drop-shadow-md"
+                />
+                <IconBrandLinkedin
+                  size="50"
+                  className="text-rose-500 drop-shadow-md"
+                />
+                <IconBrandFacebook
+                  size="50"
+                  className="text-rose-500 drop-shadow-md"
+                />
               </div>
             </div>
           </div>
