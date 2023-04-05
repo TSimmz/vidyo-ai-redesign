@@ -190,7 +190,7 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </article>
-              <div className="relative flex-grow lg-max:min-h-[450px]">
+              <div className="relative flex-grow md-max:min-h-[400px]  lg-max:min-h-[450px] md-lg:mt-8">
                 <Image
                   src="/images/content-graphic.png"
                   alt="content graphic"
