@@ -223,7 +223,7 @@ const Home: NextPage = () => {
               </article>
               <div
                 id="feature-cards"
-                className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-8 md-lg:mx-12"
+                className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-12 md-lg:mx-12"
               >
                 {/* grid-cols-3 grid-rows-2 gap-8 md:grid-cols-1 md:grid-rows-6 xl:mx-20 lg-max:grid-cols-2 lg-max:grid-rows-3 md-lg:mx-12 */}
                 <FeatureCard
