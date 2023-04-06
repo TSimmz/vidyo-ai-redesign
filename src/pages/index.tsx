@@ -345,16 +345,24 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Social Media Growth Section ===================== */}
-        <section></section>
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        </section>
 
         {/* ===================== Testimonial Section ===================== */}
-        <section></section>
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        </section>
 
         {/* ===================== FAQ Section ===================== */}
-        <section></section>
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        </section>
 
         {/* ===================== Community Section ===================== */}
-        <section></section>
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        </section>
 
         {/* ===================== Footer ===================== */}
         <footer></footer>
