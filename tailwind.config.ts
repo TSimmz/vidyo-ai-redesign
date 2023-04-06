@@ -7,6 +7,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/images/hero.jpg')",
+        'use-pattern': "url('/images/who-can-use-bg.jpg')",
       },
       screens: {
         ...defaultTheme.screens,
@@ -19,6 +20,8 @@ export default {
         'md-lg': { min: '768px', max: '1023px' },
         'lg-xl': { min: '1024px', max: '1279px' },
         'xl-2xl': { min: '1280px', max: '1535px' },
+        'sm-lg': { min: '640px', max: '1023px' },
+        'md-xl': { min: '768px', max: '1279px' },
       },
     },
   },
