@@ -1,5 +1,5 @@
 import { type NextPage } from 'next';
-import { Layout, Header } from '~/components';
+import { Layout, Header, FeatureCard } from '~/components';
 import Image from 'next/image';
 import {
   IconSparkles,
@@ -10,6 +10,12 @@ import {
   IconBrandYoutube,
   IconBrandLinkedin,
   IconBrandFacebook,
+  IconTextCaption,
+  IconVideo,
+  IconScissors,
+  IconTimelineEventExclamation,
+  IconTemplate,
+  IconCloudDownload,
 } from '@tabler/icons-react';
 
 const Home: NextPage = () => {
@@ -101,7 +107,7 @@ const Home: NextPage = () => {
         >
           <div className="mx-auto mt-8 max-w-screen-xl text-center lg:mt-20">
             <article>
-              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
                 How it works?
               </h2>
               <p className="mt-4 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
@@ -190,7 +196,7 @@ const Home: NextPage = () => {
                   </button>
                 </div>
               </article>
-              <div className="relative flex-grow md-max:min-h-[400px]  lg-max:min-h-[450px] md-lg:mt-8">
+              <div className="relative flex-grow md-max:min-h-[400px] lg-max:min-h-[450px] md-lg:mt-8">
                 <Image
                   src="/images/content-graphic.png"
                   alt="content graphic"
@@ -199,86 +205,85 @@ const Home: NextPage = () => {
                 />
               </div>
             </div>
-            <div className="mx-auto mt-4 max-w-screen-xl text-center">
+
+            {/*  */}
+            <div className="mx-auto mt-24 max-w-screen-xl text-center">
               <article className="text-center">
-                <h1 className="mb-8 text-4xl font-medium leading-tight sm:text-[3rem]">
-                  Amazing features that you can use now
+                <h1 className="mb-4 whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
+                  <span className="lg-max:mb-4 lg-max:block">
+                    Amazing features that you
+                  </span>{' '}
+                  <span>can use now</span>
                 </h1>
-                <p>
+                <p className="mx-auto w-[80%] text-zinc-700 lg:w-2/3 xl:text-lg">
                   Don't miss the chance to try out this amazing, easy-to-use
                   feature! You can use it directly and easily, without having
                   special technical skills.
                 </p>
               </article>
-              <div id="feature-cards" className="flex">
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Video Resizing</h2>
-                  <p>Get platform native sizes for videos</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Video Clipping</h2>
-                  <p>Get most interesting parts of videos magically</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Auto-video Chapters</h2>
-                  <p>Get chapter timestamps for better descriptions</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Social Media Templates</h2>
-                  <p>
-                    High performing & visually appealing looks for your videos
-                  </p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>1080p Downloads</h2>
-                  <p>Better quality for your video content</p>
-                </div>
-                <div id="feature-card">
-                  <Image
-                    className="rounded-3xl"
-                    src="/logo.png"
-                    alt="company logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h2>Auto-video Captioning</h2>
-                  <p>Captions improve video performance by 40%</p>
-                </div>
+              <div
+                id="feature-cards"
+                className="mx-20 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-8 md-lg:mx-12"
+              >
+                {/* grid-cols-3 grid-rows-2 gap-8 md:grid-cols-1 md:grid-rows-6 xl:mx-20 lg-max:grid-cols-2 lg-max:grid-rows-3 md-lg:mx-12 */}
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-rose-100 to-rose-500 drop-shadow-lg">
+                      <IconTextCaption size="36" className="text-white" />
+                    </div>
+                  }
+                  heading="Auto-video Captioning"
+                  caption="Captions improve video performance by 40%"
+                />
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-blue-100 to-blue-500 drop-shadow-lg">
+                      <IconTextCaption size="36" className="text-white" />
+                    </div>
+                  }
+                  bgIcon="blue"
+                  heading="Video Resizing"
+                  caption="Get platform native sizes for videos"
+                />
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-pink-100 to-pink-500 drop-shadow-lg">
+                      <IconScissors size="36" className="text-white" />
+                    </div>
+                  }
+                  heading="Video Clipping"
+                  caption="Get most interesting parts of videos magically"
+                />
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-orange-100 to-orange-500 drop-shadow-lg">
+                      <IconTimelineEventExclamation
+                        size="36"
+                        className="text-white"
+                      />
+                    </div>
+                  }
+                  heading="Auto-video Chapters"
+                  caption="Get chapter timestamps for better descriptions"
+                />
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-amber-100 to-amber-500 drop-shadow-lg">
+                      <IconTemplate size="36" className="text-white" />
+                    </div>
+                  }
+                  heading="Social Media Templates"
+                  caption="High performing & visually appealing looks for your videos"
+                />
+                <FeatureCard
+                  icon={
+                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-purple-100 to-purple-500 drop-shadow-lg">
+                      <IconCloudDownload size="36" className="text-white" />
+                    </div>
+                  }
+                  heading="1080p Downloads"
+                  caption="Better quality for your video content"
+                />
               </div>
             </div>
           </div>
