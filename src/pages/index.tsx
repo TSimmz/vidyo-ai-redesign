@@ -211,9 +211,9 @@ const Home: NextPage = () => {
               <article className="text-center">
                 <h1 className="mb-4 whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
                   <span className="lg-max:mb-4 lg-max:block">
-                    Amazing features that you
+                    Amazing features that
                   </span>{' '}
-                  <span>can use now</span>
+                  <span>you can use now</span>
                 </h1>
                 <p className="mx-auto w-[80%] text-zinc-700 lg:w-2/3 xl:text-lg">
                   Don't miss the chance to try out this amazing, easy-to-use
@@ -223,7 +223,7 @@ const Home: NextPage = () => {
               </article>
               <div
                 id="feature-cards"
-                className="mx-20 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-8 md-lg:mx-12"
+                className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-8 md-lg:mx-12"
               >
                 {/* grid-cols-3 grid-rows-2 gap-8 md:grid-cols-1 md:grid-rows-6 xl:mx-20 lg-max:grid-cols-2 lg-max:grid-rows-3 md-lg:mx-12 */}
                 <FeatureCard
