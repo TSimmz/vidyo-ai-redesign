@@ -16,6 +16,7 @@ import {
   IconTimelineEventExclamation,
   IconTemplate,
   IconCloudDownload,
+  IconUsersGroup,
 } from '@tabler/icons-react';
 
 const Home: NextPage = () => {
@@ -238,7 +239,7 @@ const Home: NextPage = () => {
                 <FeatureCard
                   icon={
                     <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-blue-100 to-blue-500 drop-shadow-lg">
-                      <IconTextCaption size="36" className="text-white" />
+                      <IconVideo size="36" className="text-white" />
                     </div>
                   }
                   bgIcon="blue"
@@ -290,7 +291,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Who Can Use Section ===================== */}
-        <section className="relative w-full bg-zinc-900 p-8 text-white lg:p-16">
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="text-center">
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
@@ -302,10 +303,10 @@ const Home: NextPage = () => {
             </article>
             <div
               id="who-can-use-cards"
-              className="mx-8 my-20 grid grid-cols-1 gap-8 sm:mx-2 md:grid-cols-2 xl:mx-24 lg-max:mt-12 md-lg:mx-12"
+              className="mx-8 my-20 grid grid-cols-1 gap-8 sm:mx-2 md:grid-cols-2 xl:mx-24 lg-max:mt-12 sm-lg:mx-12"
             >
-              <div className="rounded-2xl border border-white/50 bg-gradient-to-br from-white/5 to-white/20 px-6 py-8 backdrop-blur-lg">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-b from-white/5 to-white/50 drop-shadow-lg">
+              <div className="flex flex-col rounded-2xl border border-white/50 bg-gradient-to-br from-white/5 to-white/20 px-6 py-8 backdrop-blur-lg">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-br from-white/5 to-white/50 drop-shadow-lg">
                   <IconBrandYoutube size="36" className="text-white" />
                 </div>
                 <h3 className="mt-8 text-3xl">Video podcasters & creators</h3>
@@ -313,7 +314,7 @@ const Home: NextPage = () => {
                   Grow faster on social media by sharing more content from your
                   main videos with the power of content repurposing
                 </p>
-                <button className="mt-16 cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100">
+                <button className="mr-auto mt-auto cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100 md-max:mt-16">
                   <span className="mr-2">Learn more</span>
                   <IconArrowRight
                     size="20"
@@ -321,9 +322,9 @@ const Home: NextPage = () => {
                   />
                 </button>
               </div>
-              <div className="rounded-2xl border border-white/50 bg-gradient-to-br from-white/5 to-white/20 px-6 py-8 backdrop-blur-lg">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-b from-white/5 to-white/50 drop-shadow-lg">
-                  <IconBrandYoutube size="36" className="text-white" />
+              <div className="flex flex-col rounded-2xl border border-white/50 bg-gradient-to-br from-white/5 to-white/20 px-6 py-8 backdrop-blur-lg">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-br from-white/5 to-white/50 drop-shadow-lg">
+                  <IconUsersGroup size="36" className="text-white" />
                 </div>
                 <h3 className="mt-8 text-3xl">For Content Teams</h3>
                 <p className="mt-4 text-lg text-zinc-300">
@@ -331,7 +332,7 @@ const Home: NextPage = () => {
                   the right kind of content repurposing for webinars, workshop,
                   and more
                 </p>
-                <button className="mt-16 cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100">
+                <button className="mr-auto mt-16 cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100">
                   <span className="mr-2">Learn more</span>
                   <IconArrowRight
                     size="20"
