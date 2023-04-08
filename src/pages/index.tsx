@@ -111,7 +111,7 @@ const Home: NextPage = () => {
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
                 How it works?
               </h2>
-              <p className="mt-4 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
+              <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
                 vidyo.ai automatically selects, edits & captions top moments
                 from your videos
               </p>
@@ -210,13 +210,13 @@ const Home: NextPage = () => {
             {/*  */}
             <div className="mx-auto mt-24 max-w-screen-xl text-center">
               <article className="text-center">
-                <h1 className="mb-4 whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
+                <h1 className="whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
                   <span className="lg-max:mb-4 lg-max:block">
                     Amazing features that
                   </span>{' '}
                   <span>you can use now</span>
                 </h1>
-                <p className="mx-auto w-[80%] text-zinc-700 lg:w-2/3 xl:text-lg">
+                <p className="mx-auto mt-8 w-[80%] text-zinc-700 lg:w-2/3 xl:text-lg">
                   Don't miss the chance to try out this amazing, easy-to-use
                   feature! You can use it directly and easily, without having
                   special technical skills.
@@ -226,7 +226,7 @@ const Home: NextPage = () => {
                 id="feature-cards"
                 className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-12 md-lg:mx-12"
               >
-                {/* grid-cols-3 grid-rows-2 gap-8 md:grid-cols-1 md:grid-rows-6 xl:mx-20 lg-max:grid-cols-2 lg-max:grid-rows-3 md-lg:mx-12 */}
+                {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
                 <FeatureCard
                   icon={
                     <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-rose-100 to-rose-500 drop-shadow-lg">
@@ -297,7 +297,7 @@ const Home: NextPage = () => {
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
                 Who can use vidyo.ai?
               </h2>
-              <p className="mt-4 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
+              <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
                 Content repurposing can grow your online presence significantly
               </p>
             </article>
@@ -345,8 +345,104 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Social Media Growth Section ===================== */}
-        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        <section className="relative w-full p-8  lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
+            <article className="text-center">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+                Grow on social media fast
+              </h2>
+              <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
+                Don't dismiss the opportunity to use it easily and immediately,
+                even without required special technical expertise
+              </p>
+            </article>
+            {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
+            <div
+              id="who-can-use-cards"
+              className="mx-8 my-20 flex flex-wrap gap-8 sm:mx-2 xl:mx-20 lg-max:mt-12 sm-lg:mx-12"
+            >
+              <div className="flex min-w-[350px] flex-1 flex-col rounded-2xl bg-gradient-to-tr from-white to-pink-200 px-4 pb-2 pt-1">
+                <div id="three-dots" className="flex gap-2 p-2">
+                  <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                  <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                  <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                </div>
+                <div className="relative min-h-[500px] md-max:min-h-[400px] lg-max:min-h-[450px]">
+                  <Image
+                    src="/images/cut-magic.png"
+                    alt="content graphic"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div id="three-dots" className="mt-auto flex gap-2 p-2">
+                  <div className="h-[10px] flex-1 rounded-full bg-black"></div>
+                  <div className="h-[10px] flex-1 rounded-full bg-black"></div>
+                  <div className="h-[10px] flex-1 rounded-full bg-black"></div>
+                </div>
+              </div>
+              <div className="flex min-w-[350px] flex-1 flex-col gap-4 rounded-2xl">
+                <div className="rounded-2xl bg-gradient-to-b from-fuchsia-500 to-indigo-500">
+                  <div className="h-full w-full rounded-xl bg-gradient-to-r from-white via-white/70 to-white/10 p-1">
+                    <div id="three-dots" className="flex gap-2 p-2">
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                    </div>
+                    <div className=" rounded-2xl border border-white/50 bg-gradient-to-r from-transparent to-white/40 p-6">
+                      <h3 className="text-2xl font-semibold">
+                        Get short videos from long ones
+                      </h3>
+                      <p className="mt-3 text-zinc-600">
+                        Optimize your time and effort in producing videos from
+                        long to short using only AI technology
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl bg-gradient-to-b from-fuchsia-500 to-indigo-500">
+                  <div className="h-full w-full rounded-xl bg-gradient-to-r from-white via-white/70 to-white/10 p-1">
+                    <div id="three-dots" className="flex gap-2 p-2">
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                    </div>
+                    <div className=" rounded-2xl border border-white/50 bg-gradient-to-r from-transparent to-white/40 p-6">
+                      <h3 className="text-2xl font-semibold">
+                        Get 100+ templates for videos
+                      </h3>
+                      <p className="mt-3 text-zinc-600">
+                        By adopting the aritificial intelligence (AI) technology
+                        that we provide, you can get more than 100 ready-to-use
+                        video templates
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl bg-gradient-to-b from-fuchsia-500 to-indigo-500">
+                  <div className="h-full w-full rounded-xl bg-gradient-to-r from-white via-white/70 to-white/10 p-1">
+                    <div id="three-dots" className="flex gap-2 p-2">
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                      <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
+                    </div>
+                    <div className=" rounded-2xl border border-white/50 bg-gradient-to-r from-transparent to-white/40 p-6">
+                      <h3 className="text-2xl font-semibold">
+                        Goodbye to agencies & freelancers
+                      </h3>
+                      <p className="mt-3 text-zinc-600">
+                        You can produce high-quality independently, easily and
+                        effectively using AI technology, without the need for
+                        freelancers or agency assitance
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ===================== Testimonial Section ===================== */}
