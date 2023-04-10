@@ -345,7 +345,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Social Media Growth Section ===================== */}
-        <section className="relative w-full p-8  lg:p-16">
+        <section className="relative w-full sm-max:p-3 p-8 lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="text-center">
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
@@ -357,10 +357,7 @@ const Home: NextPage = () => {
               </p>
             </article>
             {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
-            <div
-              id="who-can-use-cards"
-              className="mx-8 my-20 flex flex-wrap gap-8 sm:mx-2 xl:mx-20 lg-max:mt-12 sm-lg:mx-12"
-            >
+            <div className="mx-8 my-20 flex flex-wrap gap-8 xl:mx-20 sm-max:mx-2 lg-max:mt-12 sm-lg:mx-12">
               <div className="flex min-w-[350px] flex-1 flex-col rounded-2xl bg-gradient-to-tr from-white to-pink-200 px-4 pb-2 pt-1">
                 <div id="three-dots" className="flex gap-2 p-2">
                   <div className="h-[10px] w-[10px] rounded-full bg-black"></div>
