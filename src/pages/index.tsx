@@ -453,7 +453,7 @@ const Home: NextPage = () => {
             <div id="testimonial-cards" className="flex flex-wrap gap-4">
               <div
                 id="testimonial-card"
-                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
               >
                 <div className="mb-2 flex items-center">
                   <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
@@ -477,7 +477,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="testimonial-card"
-                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
               >
                 <div className="mb-2 flex items-center">
                   <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
@@ -501,7 +501,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="testimonial-card"
-                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
               >
                 <div className="mb-2 flex items-center">
                   <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
@@ -525,7 +525,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="testimonial-card"
-                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
               >
                 <div className="mb-2 flex items-center">
                   <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
@@ -549,7 +549,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="testimonial-card"
-                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
               >
                 <div className="mb-2 flex items-center">
                   <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
