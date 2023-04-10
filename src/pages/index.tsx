@@ -17,6 +17,8 @@ import {
   IconTemplate,
   IconCloudDownload,
   IconUsersGroup,
+  IconUser,
+  IconStarFilled,
 } from '@tabler/icons-react';
 
 const Home: NextPage = () => {
@@ -345,7 +347,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Social Media Growth Section ===================== */}
-        <section className="relative w-full sm-max:p-3 p-8 lg:p-16">
+        <section className="relative w-full p-8 lg:p-16 sm-max:p-3">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="text-center">
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
@@ -443,17 +445,143 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Testimonial Section ===================== */}
-        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        <section className="relative w-full p-8 lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
+            <h2 className="mb-20 text-center text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+              Loved by 30K+ podcasters & creators
+            </h2>
+            <div id="testimonial-cards" className="flex flex-wrap gap-4">
+              <div
+                id="testimonial-card"
+                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+              >
+                <div className="mb-2 flex items-center">
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
+                    <IconUser size="16" className="text-white" />
+                  </div>
+                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
+                  <h4>- aka NAS Daily</h4>
+                </div>
+                <p className="mb-2">
+                  I was surprised by the ease and speed of the video editing
+                  service based on the AI technology from this site. The results
+                  are amazing and very satisfying.
+                </p>
+                <div className="flex items-center gap-1">
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-zinc-300" />
+                </div>
+              </div>
+              <div
+                id="testimonial-card"
+                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+              >
+                <div className="mb-2 flex items-center">
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
+                    <IconUser size="16" className="text-white" />
+                  </div>
+                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
+                  <h4>- aka NAS Daily</h4>
+                </div>
+                <p className="mb-2">
+                  I was surprised by the ease and speed of the video editing
+                  service based on the AI technology from this site. The results
+                  are amazing and very satisfying.
+                </p>
+                <div className="flex items-center gap-1">
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-zinc-300" />
+                </div>
+              </div>
+              <div
+                id="testimonial-card"
+                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+              >
+                <div className="mb-2 flex items-center">
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
+                    <IconUser size="16" className="text-white" />
+                  </div>
+                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
+                  <h4>- aka NAS Daily</h4>
+                </div>
+                <p className="mb-2">
+                  I was surprised by the ease and speed of the video editing
+                  service based on the AI technology from this site. The results
+                  are amazing and very satisfying.
+                </p>
+                <div className="flex items-center gap-1">
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-zinc-300" />
+                </div>
+              </div>
+              <div
+                id="testimonial-card"
+                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+              >
+                <div className="mb-2 flex items-center">
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
+                    <IconUser size="16" className="text-white" />
+                  </div>
+                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
+                  <h4>- aka NAS Daily</h4>
+                </div>
+                <p className="mb-2">
+                  I was surprised by the ease and speed of the video editing
+                  service based on the AI technology from this site. The results
+                  are amazing and very satisfying.
+                </p>
+                <div className="flex items-center gap-1">
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-zinc-300" />
+                </div>
+              </div>
+              <div
+                id="testimonial-card"
+                className="grow rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+              >
+                <div className="mb-2 flex items-center">
+                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
+                    <IconUser size="16" className="text-white" />
+                  </div>
+                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
+                  <h4>- aka NAS Daily</h4>
+                </div>
+                <p className="mb-2">
+                  I was surprised by the ease and speed of the video editing
+                  service based on the AI technology from this site. The results
+                  are amazing and very satisfying.
+                </p>
+                <div className="flex items-center gap-1">
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-yellow-500" />
+                  <IconStarFilled size="20" className="text-zinc-300" />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ===================== FAQ Section ===================== */}
-        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+        <section className="relative w-full p-8 text-white lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
         </section>
 
         {/* ===================== Community Section ===================== */}
-        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+        <section className="relative w-full p-8 text-white lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
         </section>
 
