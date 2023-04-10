@@ -576,13 +576,38 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== FAQ Section ===================== */}
-        <section className="relative w-full p-8 text-white lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        <section className="relative w-full bg-gradient-to-b from-zinc-50/10 to-rose-50 p-8 lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
+            <article className="text-center">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+                Frequently Asked Questions
+              </h2>
+              <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
+                Here we have compiled a list of common questions and their
+                answers to help you better understand our product and services
+              </p>
+            </article>
+            <div id="faq-list"></div>
+          </div>
         </section>
 
         {/* ===================== Community Section ===================== */}
-        <section className="relative w-full p-8 text-white lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20"></div>
+        <section className="relative w-full bg-hero-pattern bg-cover bg-center bg-no-repeat p-8 lg:p-16">
+          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
+            <article className="flex flex-col items-center">
+              <h2 className="text-center text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+                Join our community for a better understanding of our product and
+                best practices
+              </h2>
+              <button className="mb-24 mt-12 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
+                <span className="mr-2">Join Discord Server</span>
+                <IconArrowRight
+                  size="20"
+                  className="relative -top-[1px] inline"
+                />
+              </button>
+            </article>
+          </div>
         </section>
 
         {/* ===================== Footer ===================== */}
