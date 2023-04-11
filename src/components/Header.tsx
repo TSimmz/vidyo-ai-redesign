@@ -47,8 +47,8 @@ const Header: React.FC<IHeader> = () => {
   return (
     <header
       className={`fixed z-10 w-full ${
-        isPageScrolled ? 'h-16 bg-white drop-shadow-md' : 'h-20 bg-transparent'
-      } transition-all duration-300 ease-in-out`}
+        isPageScrolled ? 'h-16 bg-white' : 'h-20 bg-transparent'
+      } drop-shadow-md transition-all duration-300 ease-in-out`}
     >
       <nav className="mx-auto flex h-full w-full max-w-[1800px] content-center items-center justify-between px-5 md:px-12">
         {/* ===================== Header Logo and Text ===================== */}
@@ -121,11 +121,11 @@ const Header: React.FC<IHeader> = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className="group relative flex h-full items-center px-3 text-lg hover:bg-gradient-to-b hover:from-zinc-400/20 hover:to-transparent hover:underline lg:px-4"
+              className="group relative flex h-full items-center px-3 hover:bg-gradient-to-b hover:from-transparent hover:to-white lg:px-4"
             >
               <span className="cursor-pointer">{link.text}</span>
               {link.subLinks ? (
-                <ul className="absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal drop-shadow-md group-hover:block">
+                <ul className="absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal group-hover:block">
                   {link.subLinks.map((subLink) => (
                     <li
                       key={subLink.id}
