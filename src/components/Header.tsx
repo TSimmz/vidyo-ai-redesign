@@ -46,15 +46,15 @@ const Header: React.FC<IHeader> = () => {
 
   return (
     <header
-      className={`fixed z-10 flex w-full items-center ${
+      className={`fixed z-10 w-full ${
         isPageScrolled ? 'h-16 bg-white drop-shadow-md' : 'h-20 bg-transparent'
-      } transition-all duration-500 ease-in-out`}
+      } transition-all duration-300 ease-in-out`}
     >
-      <nav className="sticky flex h-full w-full items-center justify-between px-5 md:px-12 lg:px-20 ">
+      <nav className="mx-auto flex h-full w-full max-w-[1800px] content-center items-center justify-between px-5 md:px-12">
         {/* ===================== Header Logo and Text ===================== */}
         <div
           id="header-logo"
-          className="flex items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.05]"
+          className="flex basis-[220px] items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.05]"
         >
           <a href="/">
             <Image
@@ -143,7 +143,7 @@ const Header: React.FC<IHeader> = () => {
         {/* ===================== Desktop Login/Sign up buttons ===================== */}
         <div
           id="header-cta"
-          className="hidden items-center gap-3 font-semibold lg:flex"
+          className="hidden basis-[220px] items-center justify-end gap-3 font-semibold lg:flex"
         >
           <button
             className={`box-border rounded-3xl bg-white px-6 py-2 transition-all duration-[250ms] ease-in-out ${
