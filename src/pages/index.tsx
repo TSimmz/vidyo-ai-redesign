@@ -1,5 +1,5 @@
 import { type NextPage } from 'next';
-import { Layout, Header, FeatureCard } from '~/components';
+import { Layout, Header, Footer, FeatureCard } from '~/components';
 import Image from 'next/image';
 import {
   IconSparkles,
@@ -609,10 +609,10 @@ const Home: NextPage = () => {
             </article>
           </div>
         </section>
-
-        {/* ===================== Footer ===================== */}
-        <footer></footer>
       </main>
+
+      {/* ===================== Footer ===================== */}
+      <Footer />
     </Layout>
   );
 };
