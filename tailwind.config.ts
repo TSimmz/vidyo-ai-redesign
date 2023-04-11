@@ -22,6 +22,8 @@ export default {
         'xl-2xl': { min: '1280px', max: '1535px' },
         'sm-lg': { min: '640px', max: '1023px' },
         'md-xl': { min: '768px', max: '1279px' },
+        'footer-mobile': { max: '739px' },
+        // TODO - figure out how to differ between desktop and mobile
       },
     },
   },

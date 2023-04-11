@@ -14,8 +14,8 @@ type FooterLink = {
     id: string;
     text: string;
     link: string;
-  }[]
-}
+  }[];
+};
 
 export const navLinks: Array<NavLink> = [
   {
@@ -110,7 +110,7 @@ export const navLinks: Array<NavLink> = [
   },
 ];
 
-export const footerLinks : Array<FooterLink> = [
+export const footerLinks: Array<FooterLink> = [
   {
     id: 'features-ft',
     title: 'Features',
@@ -118,44 +118,44 @@ export const footerLinks : Array<FooterLink> = [
       {
         id: 'video-subititling-ft',
         text: 'Video Subtitling',
-        link: '/'
+        link: '/',
       },
       {
         id: 'content-repurposing-ft',
         text: 'Content Repurposing',
-        link: '/'
+        link: '/',
       },
       {
         id: 'video-resizing-ft',
         text: 'Video Resizing',
-        link: '/'
+        link: '/',
       },
       {
         id: 'video-clipping-ft',
         text: 'Video Clipping',
-        link: '/'
+        link: '/',
       },
       {
         id: 'auto-video-chapters-ft',
         text: 'Auto Video Chapters',
-        link: '/'
+        link: '/',
       },
       {
         id: 'alex-hormozi-captions-ft',
         text: 'Alex Hormozi-Captions',
-        link: '/'
+        link: '/',
       },
       {
         id: 'cut-magic-ft',
         text: 'Cut Magic (Scene Change Detection)',
-        link: '/'
+        link: '/',
       },
       {
         id: 'grant-cardone-captions-ft',
         text: 'Grant Cardone Captions',
-        link: '/'
+        link: '/',
       },
-    ]
+    ],
   },
   {
     id: 'video-templates',
@@ -164,29 +164,29 @@ export const footerLinks : Array<FooterLink> = [
       {
         id: 'facebook-template-ft',
         text: 'Facebook Templates',
-        link: '/'
+        link: '/',
       },
       {
         id: 'tiktok-template-ft',
         text: 'TikTok Templates',
-        link: '/'
+        link: '/',
       },
       {
         id: 'youtube-template-ft',
         text: 'YouTube Templates',
-        link: '/'
+        link: '/',
       },
       {
         id: 'instagram-template-ft',
         text: 'Instagram Templates',
-        link: '/'
+        link: '/',
       },
       {
         id: 'linkedin-template-ft',
         text: 'LinkedIn Templates',
-        link: '/'
+        link: '/',
       },
-    ]
+    ],
   },
   {
     id: 'company-and-resources-ft',
@@ -195,85 +195,85 @@ export const footerLinks : Array<FooterLink> = [
       {
         id: 'about-ft',
         text: 'About',
-        link: '/'
+        link: '/',
       },
       {
         id: 'terms-of-service-ft',
         text: 'Terms of Service',
-        link: '/'
+        link: '/',
       },
       {
         id: 'privacy-policy-ft',
         text: 'Privacy Policy',
-        link: '/'
+        link: '/',
       },
       {
         id: 'pricing-ft',
         text: 'Pricing',
-        link: '/'
+        link: '/',
       },
       {
         id: 'faq-ft',
         text: 'FAQ',
-        link: '/'
+        link: '/',
       },
       {
         id: 'use-cases-ft',
         text: 'Use Cases',
-        link: '/'
+        link: '/',
       },
       {
         id: 'vidyo-blog-ft',
         text: 'vidyo.ai Blog',
-        link: '/'
-      }
-    ]
+        link: '/',
+      },
+    ],
   },
   {
-    id: 'features-ft',
-    title: 'Features',
+    id: 'alternative-to-ft',
+    title: 'Alternative to',
     links: [
       {
         id: 'repurpose-io-ft',
         text: 'Repurpose.io Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'descript-ft',
         text: 'Descript Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'headliner-app-ft',
         text: 'Headliner.app Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'veed-io-ft',
         text: 'VEED.io Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'snackable-ft',
         text: 'Snackable Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'content-fries-ft',
         text: 'ContentFries Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'capcut-ft',
         text: 'CapCut Alternative',
-        link: '/'
+        link: '/',
       },
       {
         id: 'captions-ai-ft',
         text: 'Captions.ai Alternative',
-        link: '/'
+        link: '/',
       },
-    ]
+    ],
   },
   {
     id: 'repurpose-for-ft',
@@ -282,28 +282,28 @@ export const footerLinks : Array<FooterLink> = [
       {
         id: 'online-webinars-ft',
         text: 'Repurpose Online Webinars',
-        link: '/'
+        link: '/',
       },
       {
         id: 'youtube-clips-ft',
         text: 'Repurpose YouTube Clips',
-        link: '/'
+        link: '/',
       },
       {
         id: 'audio-podcasts-ft',
         text: 'Repurpose Audio Podcasts',
-        link: '/'
+        link: '/',
       },
       {
         id: 'video-podcasts-ft',
         text: 'Repurpose Video Podcasts',
-        link: '/'
+        link: '/',
       },
       {
         id: 'instagram-reels-ft',
         text: 'Repurpose Instagram Reels',
-        link: '/'
+        link: '/',
       },
-    ]
+    ],
   },
 ];
