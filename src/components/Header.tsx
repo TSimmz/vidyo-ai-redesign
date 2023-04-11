@@ -47,29 +47,12 @@ const Header: React.FC<IHeader> = () => {
   return (
     <header
       className={`fixed z-10 w-full ${
-        isPageScrolled ? 'h-16 bg-white' : 'h-20 bg-transparent'
+        isPageScrolled ? 'h-12 bg-white' : 'h-16 bg-transparent'
       } drop-shadow-md transition-all duration-300 ease-in-out`}
     >
-      <nav className="mx-auto flex h-full w-full max-w-[1800px] content-center items-center justify-between px-5 md:px-12">
-        {/* ===================== Header Logo and Text ===================== */}
-        <div
-          id="header-logo"
-          className="flex basis-[220px] items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.05]"
-        >
-          <a href="/">
-            <Image
-              className="rounded-3xl"
-              src="/logo.png"
-              alt="company logo"
-              width="30"
-              height="30"
-            />
-          </a>
-          <a href="/">vidyo.ai</a>
-        </div>
-
+      <nav className="mx-auto flex h-full w-full max-w-[1600px] items-center justify-between px-5 md:px-5 lg:px-12">
         {/* ===================== Mobile Nav Menu ===================== */}
-        <div className="relative block h-full cursor-pointer lg:hidden">
+        <div className="relative block h-full cursor-pointer md:hidden">
           {/* Hamburger button */}
           <button
             id="mobile-menu-button"
@@ -113,47 +96,78 @@ const Header: React.FC<IHeader> = () => {
           ) : null}
         </div>
 
-        {/* ===================== Desktop Nav Links ===================== */}
-        <ul
-          id="desktop-navlinks"
-          className="hidden h-full items-center font-semibold lg:flex"
-        >
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className="group relative flex h-full items-center px-3 hover:bg-gradient-to-b hover:from-transparent hover:to-white lg:px-4"
-            >
-              <span className="cursor-pointer">{link.text}</span>
-              {link.subLinks ? (
-                <ul className="absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg bg-white font-normal group-hover:block">
-                  {link.subLinks.map((subLink) => (
-                    <li
-                      key={subLink.id}
-                      className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
-                    >
-                      <span>{subLink.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </li>
-          ))}
-        </ul>
+        {/* ===================== Header Logo and Text ===================== */}
+        <div className="flex h-full grow items-center gap-4 md-max:justify-center">
+          <div className="flex h-full items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.02]">
+            <a href="/">
+              <Image
+                className="rounded-3xl"
+                src="/logo.png"
+                alt="company logo"
+                width="30"
+                height="30"
+              />
+            </a>
+            <a href="/">vidyo.ai</a>
+          </div>
+
+          {/* ===================== Desktop Nav Links ===================== */}
+          <ul
+            id="desktop-navlinks"
+            className="hidden h-full items-end whitespace-nowrap font-semibold md:flex"
+          >
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className={`group relative flex h-full items-center px-3 hover:bg-gradient-to-b ${
+                  isPageScrolled
+                    ? 'hover:from-zinc-400/10 hover:to-transparent'
+                    : 'hover:from-transparent hover:to-white'
+                } hover:text-zinc-700 lg:px-4`}
+              >
+                <span className="cursor-pointer">{link.text}</span>
+                {link.subLinks ? (
+                  <ul
+                    className={`absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg ${
+                      isPageScrolled ? '' : 'rounded-t-lg'
+                    } bg-white font-normal transition-all duration-300 ease-in-out group-hover:block`}
+                  >
+                    {link.subLinks.map((subLink) => (
+                      <li
+                        key={subLink.id}
+                        className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
+                      >
+                        <span>{subLink.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* ===================== Mobile Spacer to center Logo ===================== */}
+        <div className="relative block h-full w-8 md:hidden"></div>
 
         {/* ===================== Desktop Login/Sign up buttons ===================== */}
         <div
           id="header-cta"
-          className="hidden basis-[220px] items-center justify-end gap-3 font-semibold lg:flex"
+          className="order-2 hidden basis-[220px] items-center justify-end gap-1 font-semibold md:flex"
         >
           <button
-            className={`box-border rounded-3xl bg-white px-6 py-2 transition-all duration-[250ms] ease-in-out ${
-              isPageScrolled ? 'drop-shadow-lg' : ''
-            } hover:bg-zinc-200/70`}
+            className={`rounded-lg bg-white px-6 py-1 transition-all duration-[250ms] ease-in-out ${
+              isPageScrolled ? 'drop-shadow-md' : ''
+            } hover:bg-zinc-50`}
           >
-            LOGIN
+            Sign in
           </button>
-          <button className="rounded-3xl bg-black px-6 py-2 text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
-            SIGN UP
+          <button
+            className={`rounded-lg bg-black px-6 py-1 text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-800 ${
+              isPageScrolled ? 'drop-shadow-md' : ''
+            }`}
+          >
+            Sign up
           </button>
         </div>
       </nav>
