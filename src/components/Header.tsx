@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
+import { IconChevronDown } from '@tabler/icons-react';
 
 const MEDIUM_SCREEN_WIDTH = 1024;
 const MD_SCROLL_DISTANCE = 72; // 4.5rem
@@ -119,13 +120,19 @@ const Header: React.FC<IHeader> = () => {
             {navLinks.map((link) => (
               <li
                 key={link.id}
-                className={`group relative flex h-full items-center px-3 hover:bg-gradient-to-b ${
+                className={`group relative flex h-full cursor-pointer items-center pl-3 pr-2 hover:bg-gradient-to-b ${
                   isPageScrolled
                     ? 'hover:from-zinc-400/10 hover:to-transparent'
                     : 'hover:from-transparent hover:to-white'
                 } hover:text-zinc-700 lg:px-4`}
               >
-                <span className="cursor-pointer">{link.text}</span>
+                <span>{link.text}</span>
+                {link.subLinks ? (
+                  <IconChevronDown
+                    size="16"
+                    className="ml-1 transition-transform duration-300 ease-in-out group-hover:translate-y-1"
+                  />
+                ) : null}
                 {link.subLinks ? (
                   <ul
                     className={`absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg ${
