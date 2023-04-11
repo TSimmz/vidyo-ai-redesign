@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
 
 const MEDIUM_SCREEN_WIDTH = 1024;
-const MD_SCROLL_DISTANCE = 80;
-const SM_SCROLL_DISTANCE = 40;
+const MD_SCROLL_DISTANCE = 72; // 4.5rem
+const SM_SCROLL_DISTANCE = 32; // 2rem
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
