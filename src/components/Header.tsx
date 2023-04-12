@@ -34,8 +34,14 @@ const Header: React.FC<IHeader> = () => {
   useEffect(() => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     if (mobileMenuButton) {
-      if (mobileMenuState) mobileMenuButton.classList.add('open');
-      else mobileMenuButton.classList.remove('open');
+      if (mobileMenuState) {
+        mobileMenuButton.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      else {
+        mobileMenuButton.classList.remove('open');
+        document.body.style.overflow = 'unset';
+      }
     }
   }, [mobileMenuState]);
 
