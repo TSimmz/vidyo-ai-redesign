@@ -68,7 +68,7 @@ const Header: React.FC<IHeader> = () => {
 
           {/* Aside menu */}
           {mobileMenuState === true ? (
-            <aside className="absolute left-[-20px] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-white text-lg">
+            <aside className={`absolute left-[-20px] top-[calc(100%-1px)] z-10 h-screen w-[60vw] overflow-hidden bg-white text-lg ${isPageScrolled ? '' : 'rounded-r-xl'}`}>
               <ul
                 id="mobile-navlinks"
                 className="flex w-full flex-col items-center font-semibold"
