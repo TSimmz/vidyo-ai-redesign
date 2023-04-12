@@ -37,8 +37,7 @@ const Header: React.FC<IHeader> = () => {
       if (mobileMenuState) {
         mobileMenuButton.classList.add('open');
         document.body.style.overflow = 'hidden';
-      }
-      else {
+      } else {
         mobileMenuButton.classList.remove('open');
         document.body.style.overflow = 'unset';
       }
@@ -60,11 +59,11 @@ const Header: React.FC<IHeader> = () => {
     >
       <nav className="mx-auto flex h-full w-full max-w-[1600px] items-center justify-between px-5 md:px-5 lg:px-12">
         {/* ===================== Mobile Nav Menu ===================== */}
-        <div className="relative block h-full cursor-pointer md:hidden">
+        <div className="relative block h-full md:hidden">
           {/* Hamburger button */}
           <button
             id="mobile-menu-button"
-            className="group h-full"
+            className="group h-full cursor-pointer"
             onClick={handleMobileButtonPress}
           >
             <div className="relative top-0 h-1 w-8 rounded-full bg-black transition-all group-open:top-2 group-open:rotate-45"></div>
@@ -74,15 +73,21 @@ const Header: React.FC<IHeader> = () => {
 
           {/* Aside menu */}
           {mobileMenuState === true ? (
-            <aside className={`absolute left-[-20px] top-[calc(100%-1px)] z-10 h-screen w-[60vw] overflow-hidden bg-white text-lg ${isPageScrolled ? '' : 'rounded-r-xl'}`}>
-              <ul
-                id="mobile-navlinks"
-                className="flex w-full flex-col items-center font-semibold"
+            <aside className="absolute left-[-20px] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-zinc-600/50">
+              <div
+                className={`h-full w-[60vw] overflow-hidden bg-white ${
+                  isPageScrolled ? '' : 'rounded-r-xl'
+                }`}
               >
-                {navLinks.map((link) => (
-                  <MobileNavLink link={link} />
-                ))}
-              </ul>
+                <ul
+                  id="mobile-navlinks"
+                  className="flex w-full flex-col items-center font-semibold"
+                >
+                  {navLinks.map((link) => (
+                    <MobileNavLink link={link} />
+                  ))}
+                </ul>
+              </div>
             </aside>
           ) : null}
         </div>
