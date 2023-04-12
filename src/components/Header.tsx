@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
 import { IconChevronDown } from '@tabler/icons-react';
+import MobileNavLink from './MobileNavLink';
 
 const MEDIUM_SCREEN_WIDTH = 1024;
 const MD_SCROLL_DISTANCE = 72; // 4.5rem
@@ -73,24 +74,7 @@ const Header: React.FC<IHeader> = () => {
                 className="flex w-full flex-col items-center font-semibold"
               >
                 {navLinks.map((link) => (
-                  <li
-                    key={link.id}
-                    className="group relative flex h-full w-full flex-col items-center py-3 transition-colors duration-[250ms] ease-in-out marker:text-lg hover:bg-zinc-400/10 "
-                  >
-                    <span className="cursor-pointer">{link.text}</span>
-                    {link.subLinks ? (
-                      <ul className="mt-3 hidden w-full whitespace-nowrap text-center font-normal group-hover:block">
-                        {link.subLinks.map((subLink) => (
-                          <li
-                            key={subLink.id}
-                            className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
-                          >
-                            <span>{subLink.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </li>
+                  <MobileNavLink link={link} />
                 ))}
               </ul>
             </aside>
