@@ -292,10 +292,10 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Who Can Use Section ===================== */}
-        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat p-8 text-white lg:p-16">
+        <section className="relative w-full bg-use-pattern bg-cover bg-center bg-no-repeat px-4 py-8 text-white md:px-8 lg:px-16 lg:py-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl md:text-6xl lg:text-7xl ">
                 Who can use vidyo.ai?
               </h2>
               <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
@@ -304,22 +304,28 @@ const Home: NextPage = () => {
             </article>
             <div
               id="who-can-use-cards"
-              className="mx-8 my-20 grid grid-cols-1 gap-8 sm:mx-2 md:grid-cols-2 xl:mx-24 lg-max:mt-12 sm-lg:mx-12"
+              className="mx-auto my-20 grid max-w-md grid-cols-1 gap-5 md:max-w-screen-lg md:grid-cols-2 lg:gap-8 lg-max:mt-12"
             >
               <div className="flex flex-col rounded-2xl border border-white/50 bg-gradient-to-br from-white/5 to-white/20 px-6 py-8 backdrop-blur-lg">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-br from-white/5 to-white/50 drop-shadow-lg">
                   <IconBrandYoutube size="36" className="text-white" />
                 </div>
-                <h3 className="mt-8 text-3xl">Video podcasters & creators</h3>
-                <p className="mt-4 text-lg text-zinc-300">
+                <h3 className="mt-4 text-3xl md:mt-8">
+                  Video podcasters & creators
+                </h3>
+                <p className="mt-4 text-zinc-300 lg:text-lg">
                   Grow faster on social media by sharing more content from your
                   main videos with the power of content repurposing
                 </p>
-                <button className="mr-auto mt-auto cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100 md-max:mt-16">
-                  <span className="mr-2">Learn more</span>
+                <button className="group mr-auto mt-auto cursor-pointer rounded-full bg-white py-2 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100 sm:py-3 md-max:mt-16">
                   <IconArrowRight
                     size="20"
-                    className="relative -top-[1px] inline"
+                    className="relative -top-[1px] mr-2 hidden group-hover:inline"
+                  />
+                  <span className="mr-2 group-hover:mr-0">Learn more</span>
+                  <IconArrowRight
+                    size="20"
+                    className="relative -top-[1px] inline group-hover:hidden"
                   />
                 </button>
               </div>
@@ -327,17 +333,21 @@ const Home: NextPage = () => {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white bg-gradient-to-br from-white/5 to-white/50 drop-shadow-lg">
                   <IconUsersGroup size="36" className="text-white" />
                 </div>
-                <h3 className="mt-8 text-3xl">For Content Teams</h3>
-                <p className="mt-4 text-lg text-zinc-300">
+                <h3 className="mt-4 text-3xl md:mt-8">For Content Teams</h3>
+                <p className="mt-4 text-zinc-300 lg:text-lg">
                   Your content marketing efforts can yield up to 4x results with
                   the right kind of content repurposing for webinars, workshop,
                   and more
                 </p>
-                <button className="mr-auto mt-16 cursor-pointer rounded-full bg-white py-3 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100">
-                  <span className="mr-2">Learn more</span>
+                <button className="group mr-auto mt-16 cursor-pointer rounded-full bg-white py-2 pl-5 pr-4 text-center font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-100 sm:py-3 md-max:mt-16">
                   <IconArrowRight
                     size="20"
-                    className="relative -top-[1px] inline"
+                    className="relative -top-[1px] mr-2 hidden group-hover:inline"
+                  />
+                  <span className="mr-2 group-hover:mr-0">Learn more</span>
+                  <IconArrowRight
+                    size="20"
+                    className="relative -top-[1px] inline group-hover:hidden"
                   />
                 </button>
               </div>
