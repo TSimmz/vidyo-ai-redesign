@@ -97,10 +97,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== How It Works Section ===================== */}
-        <section
-          id="how-it-works"
-          className="relative w-full bg-gradient-to-b from-zinc-50/10 to-rose-50 p-8 lg:p-16"
-        >
+        <section id="how-it-works" className="relative w-full p-8 lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl text-center lg:mt-20">
             <article>
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl md:text-6xl lg:text-7xl ">
@@ -167,7 +164,7 @@ const Home: NextPage = () => {
         {/* ===================== Content Creation Section ===================== */}
         <section
           id="content-creation"
-          className="relative w-full bg-gradient-to-b from-rose-50 to-zinc-50/10 p-4 sm:p-8 lg:p-16"
+          className="relative w-full p-4 sm:p-8 lg:p-16"
         >
           <div className="mx-auto mt-4 max-w-screen-xl text-center">
             <div className="flex xl:gap-8 lg-max:flex-col">
@@ -508,7 +505,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== FAQ Section ===================== */}
-        <section className="relative w-full bg-gradient-to-b from-zinc-50/10 to-rose-50 p-8 lg:p-16">
+        <section className="relative w-full p-8 lg:p-16">
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="text-center">
               <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
