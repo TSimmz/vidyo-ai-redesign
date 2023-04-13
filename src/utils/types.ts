@@ -24,3 +24,9 @@ export type Testimonial = {
   text: string;
   rating: number;
 };
+
+export type FAQ = {
+  id: string;
+  question: string;
+  answer: string;
+};

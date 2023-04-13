@@ -1,4 +1,4 @@
-import { type NavLink, type FooterLink } from './types';
+import { type NavLink, type FooterLink, FAQ } from './types';
 
 export const navLinks: Array<NavLink> = [
   {
@@ -288,5 +288,85 @@ export const footerLinks: Array<FooterLink> = [
         link: '/',
       },
     ],
+  },
+];
+
+export const faqs: Array<FAQ> = [
+  {
+    id: 'faq-1',
+    question: 'How does the AI work?',
+    answer:
+      'Our AI has been trained specifically to work on content repurposing from podcasts, webinars and videos. It can automatically identify chapters and the most engaging moments from your video without any effort.',
+  },
+  {
+    id: 'faq-2',
+    question: 'How do I get started?',
+    answer:
+      'Just click on the Start button to see the power of AI content repurposing!',
+  },
+  {
+    id: 'faq-3',
+    question: 'Do you have any samples?',
+    answer:
+      'Absolutely. Once you sign up, you can click the demo button to see our content repurposing in action!',
+  },
+  {
+    id: 'faq-4',
+    question: 'What types of videos can I upload?',
+    answer:
+      'You can upload any files from your computer or use Youtube links. Keep in mind that our content repurposing works best with longer videos',
+  },
+  {
+    id: 'faq-5',
+    question: 'Will you support my language?',
+    answer:
+      'Our content repurposing algorithm currently supports only English.',
+  },
+  {
+    id: 'faq-6',
+    question: 'I am not happy with the output!',
+    answer:
+      "We're so sorry to hear that. Content repurposing may not be effective in <5% of cases. We're working on improving this!",
+  },
+  {
+    id: 'faq-7',
+    question: 'Do you also provide subtitles?',
+    answer:
+      'Yes, subtitles are super important for online content. Our content repurposing ensures you get accurate subtitles for your videos.',
+  },
+  {
+    id: 'faq-8',
+    question: 'Who is your software best suited for?',
+    answer:
+      'Content repurposing is super critical for businesses who do content marketing, video creators, podcasters & agencies.',
+  },
+  {
+    id: 'faq-9',
+    question: 'Can I get custom templates?',
+    answer:
+      'Yes, you can! Custom templates are a part of our pro plan that you can get easily!',
+  },
+  {
+    id: 'faq-10',
+    question: 'How many micro-content can you make from one video?',
+    answer:
+      "Our content repurposing mechanism is designed to extract as many pieces of content as possible so you don't miss anything!",
+  },
+  {
+    id: 'faq-11',
+    question: 'How many videos can you repurpose?',
+    answer: 'As many as you can give to us!',
+  },
+  {
+    id: 'faq-12',
+    question: 'How is content repurposing beneficial to brands?',
+    answer:
+      'Short answer, more eyeballs and views means better top of the funnel for you. For a longer answer, read our blog here.',
+  },
+  {
+    id: 'faq-13',
+    question: 'I have more questions!',
+    answer:
+      'Please feel free to chat with us via the app or drop us an email vedant@vidyo.ai should you need any help with content repurposing!',
   },
 ];
