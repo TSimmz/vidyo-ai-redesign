@@ -525,14 +525,22 @@ const Home: NextPage = () => {
           <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
             <article className="flex flex-col items-center">
               <h2 className="text-center text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
-                Join our community for a better understanding of our product and
-                best practices
+                Join our community!
               </h2>
-              <button className="mb-24 mt-12 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
-                <span className="mr-2">Join Discord Server</span>
+              <h3 className="mt-4 max-w-screen-lg text-center text-3xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl lg:text-6xl">
+                Learn more about our product, updates, and best practices!
+              </h3>
+              <button className="group mb-24 mt-10 cursor-pointer rounded-full bg-black py-2 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700 sm:py-3">
                 <IconArrowRight
                   size="20"
-                  className="relative -top-[1px] inline"
+                  className="relative -top-[1px] mr-2 hidden group-hover:inline"
+                />
+                <span className="mr-2 group-hover:mr-0">
+                  Join Discord Server
+                </span>
+                <IconArrowRight
+                  size="20"
+                  className="relative -top-[1px] inline group-hover:hidden"
                 />
               </button>
             </article>
