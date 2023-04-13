@@ -1,5 +1,11 @@
 import { type NextPage } from 'next';
-import { Layout, Header, Footer, FeatureCard } from '~/components';
+import {
+  Layout,
+  Header,
+  Footer,
+  FeatureCard,
+  TestimonialCard,
+} from '~/components';
 import Image from 'next/image';
 import {
   IconSparkles,
@@ -17,8 +23,6 @@ import {
   IconTemplate,
   IconCloudDownload,
   IconUsersGroup,
-  IconUser,
-  IconStarFilled,
 } from '@tabler/icons-react';
 
 const Home: NextPage = () => {
@@ -211,7 +215,7 @@ const Home: NextPage = () => {
             <div className="mx-auto mt-24 max-w-screen-xl text-center lg:mt-40">
               <article className="text-center">
                 <h1 className="whitespace-nowrap text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl xl:mb-8 xl:text-6xl">
-                  <span className="lg-max:mb-4 lg-max:block">
+                  <span className="lg-max:block sm-lg:mb-2">
                     Amazing features that
                   </span>{' '}
                   <span>you can use now</span>
@@ -222,70 +226,73 @@ const Home: NextPage = () => {
                   special technical skills.
                 </p>
               </article>
-              <div
-                id="feature-cards"
-                className="mx-auto my-16 flex gap-8 md:max-w-[1000px] md:flex-wrap md:justify-center md-max:snap-x md-max:overflow-x-auto md-max:scroll-smooth md-max:px-2 md-max:pb-5"
-                //className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-12 md-lg:mx-12"
-              >
-                {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-rose-100 to-rose-500 drop-shadow-lg">
-                      <IconTextCaption size="36" className="text-white" />
-                    </div>
-                  }
-                  heading="Auto-video Captioning"
-                  caption="Captions improve video performance by 40%"
-                />
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-blue-100 to-blue-500 drop-shadow-lg">
-                      <IconVideo size="36" className="text-white" />
-                    </div>
-                  }
-                  bgIcon="blue"
-                  heading="Video Resizing"
-                  caption="Get platform native sizes for videos"
-                />
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-pink-100 to-pink-500 drop-shadow-lg">
-                      <IconScissors size="36" className="text-white" />
-                    </div>
-                  }
-                  heading="Video Clipping"
-                  caption="Get most interesting parts of videos magically"
-                />
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-orange-100 to-orange-500 drop-shadow-lg">
-                      <IconTimelineEventExclamation
-                        size="36"
-                        className="text-white"
-                      />
-                    </div>
-                  }
-                  heading="Auto-video Chapters"
-                  caption="Get chapter timestamps for better descriptions"
-                />
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-amber-100 to-amber-500 drop-shadow-lg">
-                      <IconTemplate size="36" className="text-white" />
-                    </div>
-                  }
-                  heading="Social Media Templates"
-                  caption="High performing & visually appealing looks for your videos"
-                />
-                <FeatureCard
-                  icon={
-                    <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-purple-100 to-purple-500 drop-shadow-lg">
-                      <IconCloudDownload size="36" className="text-white" />
-                    </div>
-                  }
-                  heading="1080p Downloads"
-                  caption="Better quality for your video content"
-                />
+              <div className="relative">
+                <div
+                  id="feature-cards"
+                  className="relative mx-auto my-16 flex gap-8 scrollbar-hide md:max-w-[1000px] md:flex-wrap md:justify-center md-max:snap-x md-max:overflow-x-auto md-max:scroll-smooth md-max:px-2 md-max:pb-4"
+                >
+                  {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-rose-100 to-rose-500 drop-shadow-md">
+                        <IconTextCaption size="36" className="text-white" />
+                      </div>
+                    }
+                    heading="Auto-video Captioning"
+                    caption="Captions improve video performance by 40%"
+                  />
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-blue-100 to-blue-500 drop-shadow-md">
+                        <IconVideo size="36" className="text-white" />
+                      </div>
+                    }
+                    bgIcon="blue"
+                    heading="Video Resizing"
+                    caption="Get platform native sizes for videos"
+                  />
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-pink-100 to-pink-500 drop-shadow-md">
+                        <IconScissors size="36" className="text-white" />
+                      </div>
+                    }
+                    heading="Video Clipping"
+                    caption="Get most interesting parts of videos magically"
+                  />
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-orange-100 to-orange-500 drop-shadow-md">
+                        <IconTimelineEventExclamation
+                          size="36"
+                          className="text-white"
+                        />
+                      </div>
+                    }
+                    heading="Auto-video Chapters"
+                    caption="Get chapter timestamps for better descriptions"
+                  />
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-amber-100 to-amber-500 drop-shadow-md">
+                        <IconTemplate size="36" className="text-white" />
+                      </div>
+                    }
+                    heading="Social Media Templates"
+                    caption="High performing & visually appealing looks for your videos"
+                  />
+                  <FeatureCard
+                    icon={
+                      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-b from-purple-100 to-purple-500 drop-shadow-md">
+                        <IconCloudDownload size="36" className="text-white" />
+                      </div>
+                    }
+                    heading="1080p Downloads"
+                    caption="Better quality for your video content"
+                  />
+                </div>
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-[5%] bg-gradient-to-r from-white sm:w-[10%] md:hidden"></div>
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-[5%] bg-gradient-to-l from-white sm:w-[10%] md:hidden"></div>
               </div>
             </div>
           </div>
@@ -454,132 +461,48 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== Testimonial Section ===================== */}
-        <section className="relative w-full p-8 lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
-            <h2 className="mb-20 text-center text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+        <section className="relative w-full px-8 py-12">
+          <div className="mx-auto max-w-screen-xl lg:mt-20">
+            <h2 className="mb-4 text-center text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:mb-12 sm:text-5xl md:text-6xl lg:text-7xl ">
               Loved by 30K+ podcasters & creators
             </h2>
-            <div id="testimonial-cards" className="flex flex-wrap gap-4">
+            <div className="relative">
               <div
-                id="testimonial-card"
-                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                id="testimonial-cards"
+                className="flex snap-x gap-4 overflow-x-auto scroll-smooth p-2 scrollbar-hide"
               >
-                <div className="mb-2 flex items-center">
-                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
-                    <IconUser size="16" className="text-white" />
-                  </div>
-                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
-                  <h4>- aka NAS Daily</h4>
-                </div>
-                <p className="mb-2">
-                  I was surprised by the ease and speed of the video editing
-                  service based on the AI technology from this site. The results
-                  are amazing and very satisfying.
-                </p>
-                <div className="flex items-center gap-1">
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-zinc-300" />
-                </div>
+                {new Array(8).fill(null).map((_, index) => (
+                  <TestimonialCard
+                    key={index}
+                    data={{
+                      id: `${index}`,
+                      name: 'Nuseir Yassin',
+                      profession: 'aka NAS Daily',
+                      text: 'I was surprised by the ease and speed of the video editing service based on the AI technology from this site. The results are amazing and very satisfying.',
+                      rating: Math.floor(Math.random() * 5) + 1,
+                    }}
+                  />
+                ))}
               </div>
               <div
-                id="testimonial-card"
-                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
+                id="testimonial-cards"
+                className="flex snap-x gap-4 overflow-x-auto scroll-smooth p-2 scrollbar-hide"
               >
-                <div className="mb-2 flex items-center">
-                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
-                    <IconUser size="16" className="text-white" />
-                  </div>
-                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
-                  <h4>- aka NAS Daily</h4>
-                </div>
-                <p className="mb-2">
-                  I was surprised by the ease and speed of the video editing
-                  service based on the AI technology from this site. The results
-                  are amazing and very satisfying.
-                </p>
-                <div className="flex items-center gap-1">
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-zinc-300" />
-                </div>
+                {new Array(8).fill(null).map((_, index) => (
+                  <TestimonialCard
+                    key={index}
+                    data={{
+                      id: `${index}`,
+                      name: 'Nuseir Yassin',
+                      profession: 'aka NAS Daily',
+                      text: 'I was surprised by the ease and speed of the video editing service based on the AI technology from this site. The results are amazing and very satisfying.',
+                      rating: Math.floor(Math.random() * 5) + 1,
+                    }}
+                  />
+                ))}
               </div>
-              <div
-                id="testimonial-card"
-                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
-              >
-                <div className="mb-2 flex items-center">
-                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
-                    <IconUser size="16" className="text-white" />
-                  </div>
-                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
-                  <h4>- aka NAS Daily</h4>
-                </div>
-                <p className="mb-2">
-                  I was surprised by the ease and speed of the video editing
-                  service based on the AI technology from this site. The results
-                  are amazing and very satisfying.
-                </p>
-                <div className="flex items-center gap-1">
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-zinc-300" />
-                </div>
-              </div>
-              <div
-                id="testimonial-card"
-                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
-              >
-                <div className="mb-2 flex items-center">
-                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
-                    <IconUser size="16" className="text-white" />
-                  </div>
-                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
-                  <h4>- aka NAS Daily</h4>
-                </div>
-                <p className="mb-2">
-                  I was surprised by the ease and speed of the video editing
-                  service based on the AI technology from this site. The results
-                  are amazing and very satisfying.
-                </p>
-                <div className="flex items-center gap-1">
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-zinc-300" />
-                </div>
-              </div>
-              <div
-                id="testimonial-card"
-                className="shrink grow basis-80 rounded-2xl bg-white px-4 py-2 drop-shadow-lg"
-              >
-                <div className="mb-2 flex items-center">
-                  <div className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-zinc-600 drop-shadow-lg">
-                    <IconUser size="16" className="text-white" />
-                  </div>
-                  <h3 className="mr-1 font-medium text-black">Nuseir Yassin</h3>
-                  <h4>- aka NAS Daily</h4>
-                </div>
-                <p className="mb-2">
-                  I was surprised by the ease and speed of the video editing
-                  service based on the AI technology from this site. The results
-                  are amazing and very satisfying.
-                </p>
-                <div className="flex items-center gap-1">
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-yellow-500" />
-                  <IconStarFilled size="20" className="text-zinc-300" />
-                </div>
-              </div>
+              <div className="pointer-events-none absolute left-0 top-0 h-full w-[5%] bg-gradient-to-r from-white sm:w-[10%]"></div>
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-[5%] bg-gradient-to-l from-white sm:w-[10%]"></div>
             </div>
           </div>
         </section>
