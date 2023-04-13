@@ -1,21 +1,4 @@
-export type NavLink = {
-  id: string;
-  text: string;
-  subLinks?: {
-    id: string;
-    text: string;
-  }[];
-};
-
-export type FooterLink = {
-  id: string;
-  title: string;
-  links: {
-    id: string;
-    text: string;
-    link: string;
-  }[];
-};
+import { type NavLink, type FooterLink } from './types';
 
 export const navLinks: Array<NavLink> = [
   {
