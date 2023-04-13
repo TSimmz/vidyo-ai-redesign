@@ -34,16 +34,16 @@ const Home: NextPage = () => {
           className="relative flex h-[calc(100vh-50px)] w-full items-center justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat"
         >
           <div className="container mt-20 flex flex-col items-center justify-center gap-4">
-            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="whitespace-nowrap text-center text-4xl font-semibold tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               <span>Make short videos from</span>
               <br />
               <span>long ones instantly</span>
             </h1>
-            <div className="mb-6 mt-8 text-center">
-              <p className="mb-2 text-sm font-medium text-zinc-700 transition-all duration-[250ms] ease-linear md:text-base ">
+            <div className="mb-6 text-center text-xs font-medium text-zinc-700 transition-all duration-[250ms] ease-linear sm:text-sm md:mt-8 md:text-base">
+              <p className="mb-2">
                 Create social ready short clips from your long videos with AI{' '}
               </p>
-              <p className=" text-sm font-medium text-zinc-700 transition-all duration-[250ms] ease-linear md:text-base">
+              <p>
                 <span>
                   <IconSparkles size="1rem" className="inline text-rose-400" />
                 </span>{' '}
@@ -54,50 +54,39 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className="mb-2">
-              <button className="mr-3 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
-                <span className="mr-2">Start for free</span>
+              <button className="group mr-3 cursor-pointer rounded-full bg-black py-2 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700 sm:py-3 sm-max:text-sm">
                 <IconArrowRight
                   size="20"
-                  className="relative -top-[1px] inline"
+                  className="relative -top-[1px] mr-2 hidden group-hover:inline"
+                />
+                <span className="mr-2 group-hover:mr-0">Start for free</span>
+                <IconArrowRight
+                  size="20"
+                  className="relative -top-[1px] inline group-hover:hidden"
                 />
               </button>
-              <button className="rounded-full border-2 border-gray-400 bg-transparent py-3 pl-5 pr-4 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-200/40">
+              <button className="group rounded-full border-2 border-zinc-600 bg-transparent py-2 pl-5 pr-4 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-200/20 sm:py-3 sm-max:text-sm">
                 <span className="mr-2">Play demo video</span>
                 <IconPlayerPlay
                   size="20"
-                  className="relative -top-[1px] inline"
+                  className="relative -top-[1px] inline transition-all duration-[250ms] ease-in-out group-hover:scale-[1.1]"
                 />
               </button>
             </div>
-            <p className="font-medium text-zinc-700">
+            <p className="font-medium text-zinc-700 sm-max:text-xs">
               Get 75 mins of upload for free every month
             </p>
             <div id="hero-footer" className="mt-24 w-full">
-              <p className="text-center text-sm font-medium text-zinc-700 md:text-base">
+              <p className="text-center text-sm font-medium text-zinc-700 md:text-base sm-max:text-xs">
                 Make VIRAL short clips with captions, templates, emojis 🤩 &
                 more for
               </p>
               <div id="social-logos" className="mt-4 flex justify-evenly ">
-                <IconBrandTiktok
-                  size="50"
-                  className="text-rose-500 drop-shadow-md"
-                />
-                <IconBrandInstagram
-                  size="50"
-                  className="text-rose-500 drop-shadow-md"
-                />
-                <IconBrandYoutube
-                  size="50"
-                  className="text-rose-500 drop-shadow-md"
-                />
-                <IconBrandLinkedin
-                  size="50"
-                  className="text-rose-500 drop-shadow-md"
-                />
-                <IconBrandFacebook
-                  size="50"
-                  className="text-rose-500 drop-shadow-md"
-                />
+                <IconBrandTiktok className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
+                <IconBrandInstagram className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
+                <IconBrandYoutube className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
+                <IconBrandLinkedin className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
+                <IconBrandFacebook className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
               </div>
             </div>
           </div>
