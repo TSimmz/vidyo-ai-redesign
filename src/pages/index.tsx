@@ -163,33 +163,41 @@ const Home: NextPage = () => {
         {/* ===================== Content Creation Section ===================== */}
         <section
           id="content-creation"
-          className="relative w-full bg-gradient-to-b from-rose-50 to-zinc-50/10 p-8 lg:p-16"
+          className="relative w-full bg-gradient-to-b from-rose-50 to-zinc-50/10 p-4 sm:p-8 lg:p-16"
         >
           <div className="mx-auto mt-4 max-w-screen-xl text-center">
             <div className="flex xl:gap-8 lg-max:flex-col">
               <article className="flex-1 text-left lg:py-16 lg-max:pt-16 lg-max:text-center">
-                <h1 className="mb-4 whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
-                  <span className="mb-4 block">Create amazing content</span>
+                <h1 className="whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl xl:mb-8 xl:text-6xl">
+                  <span className="block sm:mb-2 lg:mb-4">
+                    Create amazing content
+                  </span>
                   <span> with AI technology</span>
                 </h1>
-                <p className=" text-zinc-700 xl:text-lg">
+                <p className="mt-8 text-zinc-700 xl:text-lg">
                   AI opens up various opportunities to improve video quality to
                   make it more interesting, information and memorable.
                 </p>
                 <div className="mt-12 flex items-center lg-max:justify-center">
-                  <button className="mr-3 cursor-pointer rounded-full bg-black py-3 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700">
-                    <span className="mr-2">Start for free</span>
+                  <button className="group mr-3 cursor-pointer rounded-full bg-black py-2 pl-5 pr-4 text-center font-medium text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-700 sm:py-3 sm-max:text-sm">
                     <IconArrowRight
                       size="20"
-                      className="relative -top-[1px] inline"
+                      className="relative -top-[1px] mr-2 hidden group-hover:inline"
+                    />
+                    <span className="mr-2 group-hover:mr-0">
+                      Start for free
+                    </span>
+                    <IconArrowRight
+                      size="20"
+                      className="relative -top-[1px] inline group-hover:hidden"
                     />
                   </button>
-                  <button className="rounded-full border border-gray-400 bg-transparent px-8 py-3 text-center font-medium transition-all duration-[250ms] ease-in-out hover:bg-rose-200/40">
+                  <button className="group rounded-full border-2 border-zinc-600 bg-transparent px-8 py-2 font-medium text-black transition-all duration-[250ms] ease-in-out hover:bg-rose-200/20 sm:py-3 sm-max:text-sm">
                     Learn More
                   </button>
                 </div>
               </article>
-              <div className="relative flex-grow md-max:min-h-[400px] lg-max:min-h-[450px] md-lg:mt-8">
+              <div className="relative shrink-0 grow basis-[400px] md-lg:mt-8">
                 <Image
                   src="/images/content-graphic.png"
                   alt="content graphic"
@@ -200,9 +208,9 @@ const Home: NextPage = () => {
             </div>
 
             {/*  */}
-            <div className="mx-auto mt-24 max-w-screen-xl text-center">
+            <div className="mx-auto mt-24 max-w-screen-xl text-center lg:mt-40">
               <article className="text-center">
-                <h1 className="whitespace-nowrap  text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-5xl xl:mb-8 xl:text-6xl">
+                <h1 className="whitespace-nowrap text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl xl:mb-8 xl:text-6xl">
                   <span className="lg-max:mb-4 lg-max:block">
                     Amazing features that
                   </span>{' '}
@@ -216,7 +224,8 @@ const Home: NextPage = () => {
               </article>
               <div
                 id="feature-cards"
-                className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-12 md-lg:mx-12"
+                className="mx-auto my-16 flex gap-8 md:max-w-[1000px] md:flex-wrap md:justify-center md-max:snap-x md-max:overflow-x-auto md-max:scroll-smooth md-max:px-2 md-max:pb-5"
+                //className="mx-8 my-16 grid grid-cols-1 gap-8 sm:mx-2 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 xl:mx-20 lg-max:mt-12 md-lg:mx-12"
               >
                 {/* TODO - animate idea: randomly 'hover' each card or cycle through them since data is static */}
                 <FeatureCard
