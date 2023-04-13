@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         >
           <div className="mx-auto mt-8 max-w-screen-xl text-center lg:mt-20">
             <article>
-              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
+              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear sm:text-5xl md:text-6xl lg:text-7xl ">
                 How it works?
               </h2>
               <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
@@ -109,11 +109,12 @@ const Home: NextPage = () => {
             </article>
             <div
               id="cards-section"
-              className="mt-8 flex flex-col justify-between gap-8 px-4 md:px-20 lg:mt-20 lg:flex-row lg:px-0"
+              className="mt-8 flex flex-wrap justify-center gap-8 lg:mt-20"
+              //className="mt-8 flex flex-col justify-between gap-8 px-4 md:px-20 lg:mt-20 lg:flex-row lg:px-0"
             >
               <div
                 id="card"
-                className="w-full min-w-[60%] overflow-hidden rounded-3xl md:min-w-[20%]"
+                className="max-w-[400px] shrink-0 grow basis-[350px] overflow-hidden rounded-3xl drop-shadow-md"
               >
                 <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
                 <div className="h-full w-full bg-white p-8">
@@ -127,7 +128,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="card"
-                className="w-full min-w-[80%] overflow-hidden rounded-3xl md:min-w-[20%]"
+                className="max-w-[400px] shrink-0 grow basis-[350px] overflow-hidden rounded-3xl drop-shadow-md"
               >
                 <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
                 <div className="h-full w-full bg-white p-8">
@@ -142,7 +143,7 @@ const Home: NextPage = () => {
               </div>
               <div
                 id="card"
-                className="w-full min-w-[80%] overflow-hidden rounded-3xl md:min-w-[20%]"
+                className="max-w-[400px] shrink-0 grow basis-[350px] overflow-hidden rounded-3xl drop-shadow-md"
               >
                 <div className="h-80 bg-gradient-to-tr from-[#ffffff] to-[#ffcbf2]"></div>
                 <div className="h-full w-full bg-white p-8">
