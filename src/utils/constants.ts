@@ -1,4 +1,4 @@
-type NavLink = {
+export type NavLink = {
   id: string;
   text: string;
   subLinks?: {
@@ -7,7 +7,7 @@ type NavLink = {
   }[];
 };
 
-type FooterLink = {
+export type FooterLink = {
   id: string;
   title: string;
   links: {
