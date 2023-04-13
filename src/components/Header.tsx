@@ -73,11 +73,15 @@ const Header: React.FC<IHeader> = () => {
 
           {/* Aside menu */}
           {mobileMenuState === true ? (
-            <aside className="absolute left-[-20px] top-[calc(100%-1px)] z-10 h-screen w-screen overflow-hidden bg-zinc-600/50">
+            <aside
+              className={`absolute left-[-20px] top-[calc(100%-1px)] z-10 ${
+                isPageScrolled
+                  ? 'h-[calc(100vh-3rem+1px)]'
+                  : 'h-[calc(100vh-4rem+1px)]'
+              } w-screen overflow-hidden bg-zinc-600/50`}
+            >
               <div
-                className={`h-full w-[60vw] overflow-hidden bg-white ${
-                  isPageScrolled ? '' : 'rounded-r-xl'
-                }`}
+                className={`relative h-full w-[80vw] overflow-hidden bg-white sm:w-[60vw]`}
               >
                 <ul
                   id="mobile-navlinks"
@@ -87,6 +91,31 @@ const Header: React.FC<IHeader> = () => {
                     <MobileNavLink link={link} />
                   ))}
                 </ul>
+                <div className="absolute bottom-0 flex w-full justify-between border-t-2 border-zinc-200 font-semibold">
+                  <div className="p-4">
+                    <Image
+                      className="rounded-3xl"
+                      src="/logo.png"
+                      alt="company logo"
+                      width="30"
+                      height="30"
+                    />
+                  </div>
+                  <div className="flex items-center gap-4 p-4">
+                    <button
+                      className={`rounded-lg bg-white px-6 py-1 drop-shadow-lg transition-all duration-[250ms] ease-in-out hover:bg-zinc-50`}
+                    >
+                      Sign in
+                    </button>
+                    <button
+                      className={`rounded-lg bg-black px-6 py-1 text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-800 ${
+                        isPageScrolled ? 'drop-shadow-md' : ''
+                      }`}
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                </div>
               </div>
             </aside>
           ) : null}
@@ -155,7 +184,7 @@ const Header: React.FC<IHeader> = () => {
         {/* ===================== Desktop Login/Sign up buttons ===================== */}
         <div
           id="header-cta"
-          className="order-2 hidden basis-[220px] items-center justify-end gap-1 font-semibold md:flex"
+          className="hidden basis-[220px] items-center justify-end gap-1 font-semibold md:flex"
         >
           <button
             className={`rounded-lg bg-white px-6 py-1 transition-all duration-[250ms] ease-in-out ${
