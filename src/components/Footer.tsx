@@ -18,9 +18,11 @@ const Footer: React.FC<IHeader> = () => {
     event.preventDefault();
     const clickedSubMenuItem = (event.target as HTMLLIElement).id;
 
-    if (clickedSubMenuItem === currentOpenSubMenuItem)
-      setCurrentOpenSubMenuItem(() => '');
-    else setCurrentOpenSubMenuItem(() => clickedSubMenuItem);
+    if (clickedSubMenuItem) {
+      if (clickedSubMenuItem === currentOpenSubMenuItem)
+        setCurrentOpenSubMenuItem(() => '');
+      else setCurrentOpenSubMenuItem(() => clickedSubMenuItem);
+    }
   };
 
   return (
@@ -80,20 +82,22 @@ const Footer: React.FC<IHeader> = () => {
       </div>
 
       {/* ===================== Mobile Footer Links ===================== */}
-      <ul className="mt-8 hidden w-full flex-col border-b-2 border-zinc-300 pb-8 text-center footer-mobile:flex">
+      <ul className="mt-8 hidden w-full flex-col border-b-2 border-zinc-300 pb-8 text-center text-sm footer-mobile:flex">
         {footerLinks.map((footerLink) => {
           const isOpen = currentOpenSubMenuItem === footerLink.id;
           return (
             <li
               id={footerLink.id}
-              className="flex cursor-pointer flex-col items-center border border-red-500 px-3 py-2"
+              className={`flex cursor-pointer flex-col items-center rounded-xl px-3 py-2 ${
+                isOpen ? 'bg-zinc-50' : ''
+              }`}
               onClick={handleMobileSubMenuClick}
             >
               <h3 className="pointer-events-none flex w-full items-center justify-between text-left font-semibold">
                 <span>{footerLink.title}</span>
                 <span
-                  className={`pointer-events-none ml-2 border border-red-500 text-center text-xl leading-[100%] transition-all duration-200 ease-in-out ${
-                    isOpen ? 'rotate-[135deg]' : ''
+                  className={`pointer-events-none ml-2 text-center text-xl leading-[100%] transition-all duration-200 ease-in-out ${
+                    isOpen ? 'translate-x-[1px] rotate-[135deg]' : ''
                   } `}
                 >
                   +
@@ -102,10 +106,13 @@ const Footer: React.FC<IHeader> = () => {
               <ul
                 className={`${
                   isOpen ? 'block' : 'hidden'
-                } pointer-events-none ml-1 mt-1 sm-max:text-sm`}
+                } ml-1 mt-1 w-full text-left`}
               >
                 {footerLink.links.map((link) => (
-                  <li key={link.id} className="py-1 text-zinc-600">
+                  <li
+                    key={link.id}
+                    className="py-1 text-zinc-600 hover:text-black"
+                  >
                     <a href={link.link}>{link.text}</a>
                   </li>
                 ))}

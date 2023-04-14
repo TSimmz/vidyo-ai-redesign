@@ -16,6 +16,7 @@ const FAQItem: React.FC<IFAQItem> = ({ data, isOpen, onClick }) => {
       }`}
       onClick={onClick}
     >
+      {/* pointer-events-none prevents the children from being clicked and send through the onClick */}
       <h3
         className={`pointer-events-none flex justify-between align-middle font-semibold sm:text-lg`}
       >
