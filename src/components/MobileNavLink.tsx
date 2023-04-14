@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { IconChevronRight } from '@tabler/icons-react';
-import { type NavLink } from '~/utils/constants';
+import { type NavLink } from '~/utils/types';
 
 interface IMobileNavLink extends React.PropsWithChildren<any> {
   link: NavLink;
