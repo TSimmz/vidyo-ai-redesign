@@ -5,6 +5,7 @@ import {
   Footer,
   FeatureCard,
   TestimonialCard,
+  FAQSection,
 } from '~/components';
 import Image from 'next/image';
 import {
@@ -505,20 +506,7 @@ const Home: NextPage = () => {
         </section>
 
         {/* ===================== FAQ Section ===================== */}
-        <section className="relative w-full p-8 lg:p-16">
-          <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
-            <article className="text-center">
-              <h2 className="text-4xl font-medium tracking-tight transition-all duration-[250ms] ease-linear md:text-6xl lg:text-7xl ">
-                Frequently Asked Questions
-              </h2>
-              <p className="mt-8 text-base transition-all duration-[250ms] ease-linear lg:text-lg">
-                Here we have compiled a list of common questions and their
-                answers to help you better understand our product and services
-              </p>
-            </article>
-            <div id="faq-list"></div>
-          </div>
-        </section>
+        <FAQSection />
 
         {/* ===================== Community Section ===================== */}
         <section className="relative w-full bg-hero-pattern bg-cover bg-center bg-no-repeat p-8 lg:p-16">
