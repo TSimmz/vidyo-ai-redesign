@@ -81,12 +81,15 @@ const Home: NextPage = () => {
             <p className="font-medium text-zinc-700 sm-max:text-xs">
               Get 75 mins of upload for free every month
             </p>
-            <div id="hero-footer" className="mt-24 w-full">
+            <div id="hero-footer" className="mt-12 w-full">
               <p className="text-center text-sm font-medium text-zinc-700 md:text-base sm-max:text-xs">
                 Make VIRAL short clips with captions, templates, emojis 🤩 &
                 more for
               </p>
-              <div id="social-logos" className="mt-4 flex justify-evenly ">
+              <div
+                id="social-logos"
+                className="mx-auto mt-4 flex max-w-screen-md justify-evenly"
+              >
                 <IconBrandTiktok className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
                 <IconBrandInstagram className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />
                 <IconBrandYoutube className="h-[32px] w-[32px] text-rose-500 drop-shadow-md sm:h-[50px] sm:w-[50px]" />

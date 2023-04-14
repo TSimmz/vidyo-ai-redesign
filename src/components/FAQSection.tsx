@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import FAQ from './FAQItem';
 import { faqs } from '~/utils/constants';
 
 interface IFAQSection extends React.PropsWithChildren<any> {}
 
 const FAQSection: React.FC<IFAQSection> = () => {
+  const [currentOpenFaq, setCurrentOpenFaq] = useState('');
+
+  const handleFaqClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    event.preventDefault();
+    const clickedFaq = (event.target as HTMLLIElement).id;
+
+    if (clickedFaq === currentOpenFaq) setCurrentOpenFaq(() => '');
+    else setCurrentOpenFaq(() => clickedFaq);
+  };
+
   return (
     <section className="relative w-full p-8 lg:p-16">
       <div className="mx-auto mt-8 max-w-screen-xl lg:mt-20">
@@ -19,7 +30,12 @@ const FAQSection: React.FC<IFAQSection> = () => {
         <div id="faq-list" className="mx-auto mt-8 max-w-[800px]">
           <ul className="flex flex-col gap-2">
             {faqs.map((faq) => (
-              <FAQ key={faq.id} data={faq} />
+              <FAQ
+                key={faq.id}
+                data={faq}
+                isOpen={currentOpenFaq === faq.id}
+                onClick={handleFaqClick}
+              />
             ))}
           </ul>
         </div>
