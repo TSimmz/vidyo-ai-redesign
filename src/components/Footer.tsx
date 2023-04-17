@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { footerLinks } from '~/utils/constants';
 import {
   IconBrandTiktok,
@@ -8,11 +7,13 @@ import {
   IconBrandLinkedin,
   IconBrandFacebook,
 } from '@tabler/icons-react';
+import useMobileState from '~/utils/hooks/useMobileState';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
 const Footer: React.FC<IHeader> = () => {
-  const [currentOpenSubMenuItem, setCurrentOpenSubMenuItem] = useState('');
+  const [currentOpenSubMenuItem, setCurrentOpenSubMenuItem, isMobileScreen] =
+    useMobileState<string>({ initialState: '' });
 
   const handleMobileSubMenuClick = (event: React.MouseEvent<HTMLLIElement>) => {
     event.preventDefault();
