@@ -7,7 +7,7 @@ import {
   IconBrandLinkedin,
   IconBrandFacebook,
 } from '@tabler/icons-react';
-import useMobileState from '~/utils/hooks/useMobileState';
+import { useMobileState } from '~/utils/hooks';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 

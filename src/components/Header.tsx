@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
 import { IconChevronDown } from '@tabler/icons-react';
 import MobileNavLink from './MobileNavLink';
-import useMobileState from '~/utils/hooks/useMobileState';
+import { useMobileState } from '~/utils/hooks';
 
-const MEDIUM_SCREEN_WIDTH = 1024;
 const MD_SCROLL_DISTANCE = 72; // 4.5rem
 const SM_SCROLL_DISTANCE = 32; // 2rem
 

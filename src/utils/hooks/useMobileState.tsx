@@ -8,6 +8,13 @@ interface IUseMobileState<T> {
   maxScreenSize?: number; // Screen size (if different than default medium)
 }
 
+// ==========================================================================
+// Custom Hook - useMobileState
+//
+// Functions essentially the same as the regular useState.
+// Adds functionality to check for mobile screen size.
+// Adds functionality to reset state after switching from mobile to desktop
+// ==========================================================================
 function useMobileState<T>({
   initialState,
   closedState,
