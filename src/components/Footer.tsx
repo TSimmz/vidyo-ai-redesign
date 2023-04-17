@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { footerLinks } from '~/utils/constants';
 import {
   IconBrandTiktok,
@@ -8,10 +7,25 @@ import {
   IconBrandLinkedin,
   IconBrandFacebook,
 } from '@tabler/icons-react';
+import { useMobileState } from '~/utils/hooks';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
 const Footer: React.FC<IHeader> = () => {
+  const [currentOpenSubMenuItem, setCurrentOpenSubMenuItem, isMobileScreen] =
+    useMobileState<string>({ initialState: '' });
+
+  const handleMobileSubMenuClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    event.preventDefault();
+    const clickedSubMenuItem = (event.target as HTMLLIElement).id;
+
+    if (clickedSubMenuItem) {
+      if (clickedSubMenuItem === currentOpenSubMenuItem)
+        setCurrentOpenSubMenuItem(() => '');
+      else setCurrentOpenSubMenuItem(() => clickedSubMenuItem);
+    }
+  };
+
   return (
     <footer className="mx-auto flex max-w-7xl flex-col items-center justify-center px-8 py-12 text-xs lg:text-sm sm-max:py-4">
       <div className="flex w-full flex-row justify-between">
@@ -69,17 +83,41 @@ const Footer: React.FC<IHeader> = () => {
       </div>
 
       {/* ===================== Mobile Footer Links ===================== */}
-      <ul className="mt-8 hidden w-full flex-col border-b-2 border-zinc-300 pb-8 text-center footer-mobile:flex">
+      <ul className="mt-8 hidden w-full flex-col border-b-2 border-zinc-300 pb-8 text-center text-sm footer-mobile:flex">
         {footerLinks.map((footerLink) => {
+          const isOpen = currentOpenSubMenuItem === footerLink.id;
           return (
-            <li className="flex justify-around px-3 py-2">
-              <span className="grow text-left font-semibold">
-                {footerLink.title}
-              </span>
-              <button id="mobile-menu-button" className="group h-full">
-                <div className="relative top-1 h-1 w-4 rotate-90 rounded-full bg-black"></div>
-                <div className="relative h-1 w-4 rounded-full bg-black"></div>
-              </button>
+            <li
+              id={footerLink.id}
+              className={`flex cursor-pointer flex-col items-center rounded-xl px-3 py-2 ${
+                isOpen ? 'bg-zinc-50' : ''
+              }`}
+              onClick={handleMobileSubMenuClick}
+            >
+              <h3 className="pointer-events-none flex w-full items-center justify-between text-left font-semibold">
+                <span>{footerLink.title}</span>
+                <span
+                  className={`pointer-events-none ml-2 text-center text-xl leading-[100%] transition-all duration-200 ease-in-out ${
+                    isOpen ? 'translate-x-[1px] rotate-[135deg]' : ''
+                  } `}
+                >
+                  +
+                </span>
+              </h3>
+              <ul
+                className={`${
+                  isOpen ? 'block' : 'hidden'
+                } ml-1 mt-1 w-full text-left`}
+              >
+                {footerLink.links.map((link) => (
+                  <li
+                    key={link.id}
+                    className="py-1 text-zinc-600 hover:text-black"
+                  >
+                    <a href={link.link}>{link.text}</a>
+                  </li>
+                ))}
+              </ul>
             </li>
           );
         })}

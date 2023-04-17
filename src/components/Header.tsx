@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { navLinks } from '~/utils/constants';
 import { IconChevronDown } from '@tabler/icons-react';
 import MobileNavLink from './MobileNavLink';
+import { useMobileState } from '~/utils/hooks';
 
-const MEDIUM_SCREEN_WIDTH = 1024;
 const MD_SCROLL_DISTANCE = 72; // 4.5rem
 const SM_SCROLL_DISTANCE = 32; // 2rem
 
@@ -12,29 +12,24 @@ interface IHeader extends React.PropsWithChildren<any> {}
 
 const Header: React.FC<IHeader> = () => {
   const [isPageScrolled, setIsPageScrolled] = useState(false);
-  const [mobileMenuState, setMobileMenuState] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen, isMobileScreen] =
+    useMobileState<boolean>({ initialState: false });
 
   const updatePageScrolledStatus = () => {
-    let scrollThreshold =
-      window.innerWidth >= MEDIUM_SCREEN_WIDTH
-        ? MD_SCROLL_DISTANCE
-        : SM_SCROLL_DISTANCE;
+    let scrollThreshold = isMobileScreen
+      ? SM_SCROLL_DISTANCE
+      : MD_SCROLL_DISTANCE;
     setIsPageScrolled(window.scrollY >= scrollThreshold);
-  };
-
-  const updatedMobileMenuState = () => {
-    if (window.innerWidth >= MEDIUM_SCREEN_WIDTH) setMobileMenuState(false);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', updatePageScrolledStatus);
-    window.addEventListener('resize', updatedMobileMenuState);
   }, []);
 
   useEffect(() => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     if (mobileMenuButton) {
-      if (mobileMenuState) {
+      if (isMobileMenuOpen) {
         mobileMenuButton.classList.add('open');
         document.body.style.overflow = 'hidden';
       } else {
@@ -42,13 +37,13 @@ const Header: React.FC<IHeader> = () => {
         document.body.style.overflow = 'unset';
       }
     }
-  }, [mobileMenuState]);
+  }, [isMobileMenuOpen]);
 
   const handleMobileButtonPress = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
     event.preventDefault();
-    setMobileMenuState((previousState) => !previousState);
+    setIsMobileMenuOpen((previousState) => !previousState);
   };
 
   return (
@@ -72,7 +67,7 @@ const Header: React.FC<IHeader> = () => {
           </button>
 
           {/* Aside menu */}
-          {mobileMenuState === true ? (
+          {isMobileMenuOpen === true ? (
             <aside
               className={`absolute left-[-20px] top-[calc(100%-1px)] z-10 ${
                 isPageScrolled
