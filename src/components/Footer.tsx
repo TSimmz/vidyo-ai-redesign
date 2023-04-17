@@ -13,7 +13,7 @@ interface IHeader extends React.PropsWithChildren<any> {}
 
 const Footer: React.FC<IHeader> = () => {
   const [currentOpenSubMenuItem, setCurrentOpenSubMenuItem, isMobileScreen] =
-    useMobileState<string>({ initialState: '' });
+    useMobileState('');
 
   const handleMobileSubMenuClick = (event: React.MouseEvent<HTMLLIElement>) => {
     event.preventDefault();

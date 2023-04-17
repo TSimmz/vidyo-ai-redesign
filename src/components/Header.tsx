@@ -13,7 +13,7 @@ interface IHeader extends React.PropsWithChildren<any> {}
 const Header: React.FC<IHeader> = () => {
   const [isPageScrolled, setIsPageScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen, isMobileScreen] =
-    useMobileState<boolean>({ initialState: false });
+    useMobileState(false);
 
   const updatePageScrolledStatus = () => {
     let scrollThreshold = isMobileScreen
