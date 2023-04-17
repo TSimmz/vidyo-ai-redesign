@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { navLinks } from '~/utils/constants';
-import { IconChevronDown } from '@tabler/icons-react';
-import MobileNavLink from './MobileNavLink';
+import { DesktopNavItem, MobileNavLink } from '~/components';
 import { useMobileState, usePageScrolled } from '~/utils/hooks';
 
 interface IHeader extends React.PropsWithChildren<any> {}
@@ -123,38 +122,7 @@ const Header: React.FC<IHeader> = () => {
             className="hidden h-full items-end whitespace-nowrap font-semibold md:flex"
           >
             {navLinks.map((link) => (
-              <li
-                key={link.id}
-                className={`group relative flex h-full cursor-pointer items-center pl-3 pr-2 hover:bg-gradient-to-b ${
-                  isPageScrolled
-                    ? 'hover:from-zinc-400/10 hover:to-transparent'
-                    : 'hover:from-transparent hover:to-white'
-                } hover:text-zinc-700 lg:px-4`}
-              >
-                <span>{link.text}</span>
-                {link.subLinks ? (
-                  <IconChevronDown
-                    size="16"
-                    className="ml-1 transition-transform duration-300 ease-in-out group-hover:translate-y-1"
-                  />
-                ) : null}
-                {link.subLinks ? (
-                  <ul
-                    className={`absolute left-1/2 top-full hidden -translate-x-1/2 overflow-hidden whitespace-nowrap rounded-b-lg ${
-                      isPageScrolled ? '' : 'rounded-t-lg'
-                    } bg-white font-normal transition-all duration-300 ease-in-out group-hover:block`}
-                  >
-                    {link.subLinks.map((subLink) => (
-                      <li
-                        key={subLink.id}
-                        className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
-                      >
-                        <span>{subLink.text}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </li>
+              <DesktopNavItem link={link} isPageScrolled={isPageScrolled} />
             ))}
           </ul>
         </div>
