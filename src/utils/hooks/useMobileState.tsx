@@ -31,7 +31,7 @@ function useMobileState<T>(
     setComponentState(() => resetState || initialState);
   };
 
-  // Sets up event listener for window resizes
+  // Sets initial mobile state and adds event listener for window resizes
   useEffect(() => {
     checkForMobile();
 

@@ -1,30 +1,16 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { navLinks } from '~/utils/constants';
 import { IconChevronDown } from '@tabler/icons-react';
 import MobileNavLink from './MobileNavLink';
-import { useMobileState } from '~/utils/hooks';
-
-const MD_SCROLL_DISTANCE = 72; // 4.5rem
-const SM_SCROLL_DISTANCE = 32; // 2rem
+import { useMobileState, usePageScrolled } from '~/utils/hooks';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
 const Header: React.FC<IHeader> = () => {
-  const [isPageScrolled, setIsPageScrolled] = useState(false);
+  const isPageScrolled = usePageScrolled();
   const [isMobileMenuOpen, setIsMobileMenuOpen, isMobileScreen] =
     useMobileState(false);
-
-  const updatePageScrolledStatus = () => {
-    let scrollThreshold = isMobileScreen
-      ? SM_SCROLL_DISTANCE
-      : MD_SCROLL_DISTANCE;
-    setIsPageScrolled(window.scrollY >= scrollThreshold);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', updatePageScrolledStatus);
-  }, []);
 
   useEffect(() => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
