@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { navLinks } from '~/utils/constants';
 import { DesktopNavItem, MobileNavLink } from '~/components';
 import { useMobileState, usePageScrolled } from '~/utils/hooks';
+import { motion } from 'framer-motion';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
@@ -103,8 +104,13 @@ const Header: React.FC<IHeader> = () => {
 
         {/* ===================== Header Logo and Text ===================== */}
         <div className="flex h-full grow items-center gap-4 md-max:justify-center">
-          <div className="flex h-full items-center gap-3 text-[26px] font-semibold transition-all ease-in-out hover:scale-[1.02]">
-            <a href="/">
+          <motion.h1
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            className="flex h-full items-center gap-3 text-[26px] font-semibold"
+          >
+            <a className="shrink-0" href="/">
               <Image
                 className="rounded-3xl"
                 src="/logo.png"
@@ -114,7 +120,7 @@ const Header: React.FC<IHeader> = () => {
               />
             </a>
             <a href="/">vidyo.ai</a>
-          </div>
+          </motion.h1>
 
           {/* ===================== Desktop Nav Links ===================== */}
           <ul
@@ -133,22 +139,28 @@ const Header: React.FC<IHeader> = () => {
         {/* ===================== Desktop Login/Sign up buttons ===================== */}
         <div
           id="header-cta"
-          className="hidden basis-[220px] items-center justify-end gap-1 font-semibold md:flex"
+          className="hidden basis-[220px] items-center justify-end gap-2 font-semibold md:flex"
         >
-          <button
-            className={`rounded-lg bg-white px-6 py-1 transition-all duration-[250ms] ease-in-out ${
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            className={`rounded-lg bg-white px-5 py-1 ${
               isPageScrolled ? 'drop-shadow-md' : ''
             } hover:bg-zinc-50`}
           >
             Sign in
-          </button>
-          <button
-            className={`rounded-lg bg-black px-6 py-1 text-white transition-all duration-[250ms] ease-in-out hover:bg-zinc-800 ${
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            className={`rounded-lg bg-black px-5 py-1 text-white hover:bg-zinc-800 ${
               isPageScrolled ? 'drop-shadow-md' : ''
             }`}
           >
             Sign up
-          </button>
+          </motion.button>
         </div>
       </nav>
     </header>
