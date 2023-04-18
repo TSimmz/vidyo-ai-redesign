@@ -5,17 +5,17 @@ import { type NavLink } from '~/utils/types';
 
 const listVariants: Variants = {
   open: {
-    clipPath: 'inset(0% 0% 0% 0% round 10px)',
+    clipPath: 'inset(0% 0% 0% 0%)',
     transition: {
       type: 'spring',
       bounce: 0,
-      duration: 0.7,
-      delayChildren: 0.3,
+      duration: 0.5,
+      delayChildren: 0.1,
       staggerChildren: 0.05,
     },
   },
   closed: {
-    clipPath: 'inset(10% 50% 90% 50% round 10px)',
+    clipPath: 'inset(0% 0% 100% 0% round 10px)',
     transition: {
       type: 'spring',
       bounce: 0,
@@ -48,8 +48,8 @@ const DesktopNavItem: React.FC<IDesktopNavItem> = ({
     <motion.li
       initial={false}
       animate={isItemHovered ? 'open' : 'closed'}
-      onHoverStart={() => setIsItemHovered(true)}
-      onHoverEnd={() => setIsItemHovered(false)}
+      onMouseEnter={() => setIsItemHovered(true)}
+      onMouseLeave={() => setIsItemHovered(false)}
       key={link.id}
       className={`group relative flex h-full cursor-pointer items-center pl-3 pr-2 hover:bg-gradient-to-b ${
         isPageScrolled
@@ -75,7 +75,7 @@ const DesktopNavItem: React.FC<IDesktopNavItem> = ({
             <motion.li
               variants={listItemVariants}
               key={subLink.id}
-              className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20"
+              className="cursor-pointer px-4 py-3 hover:bg-zinc-400/20 hover:text-black"
             >
               <span>{subLink.text}</span>
             </motion.li>
