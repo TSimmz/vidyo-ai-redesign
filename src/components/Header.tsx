@@ -39,27 +39,8 @@ const Header: React.FC<IHeader> = () => {
       } drop-shadow-md transition-all duration-300 ease-in-out`}
     >
       <nav className="mx-auto flex h-full w-full max-w-[1600px] items-center justify-between px-5 md:px-5 lg:px-12">
-        {/* ===================== Mobile Nav Menu ===================== */}
-        <div className="relative block h-full md:hidden">
-          {/* Hamburger button */}
-          <button
-            id="mobile-menu-button"
-            className="group h-full cursor-pointer"
-            onClick={handleMobileButtonPress}
-          >
-            <div className="relative top-0 h-1 w-8 rounded-full bg-black transition-all group-open:top-2 group-open:rotate-45"></div>
-            <div className="mt-1 h-1 w-8 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
-            <div className="relative top-0 mt-1 h-1 w-8 rounded-full bg-black transition-all group-open:-top-2 group-open:-rotate-45"></div>
-          </button>
-
-          {/* Aside menu */}
-          {isMobileMenuOpen === true ? (
-            <MobileNavMenu isPageScrolled={isPageScrolled} />
-          ) : null}
-        </div>
-
         {/* ===================== Header Logo and Text ===================== */}
-        <div className="flex h-full grow items-center gap-4 md-max:justify-center">
+        <div className="flex h-full grow items-center gap-4">
           <motion.h1
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -89,8 +70,24 @@ const Header: React.FC<IHeader> = () => {
           </ul>
         </div>
 
-        {/* ===================== Mobile Spacer to center Logo ===================== */}
-        <div className="relative block h-full w-8 md:hidden"></div>
+        {/* ===================== Mobile Nav Menu ===================== */}
+        <div className="relative block h-full md:hidden">
+          {/* Hamburger button */}
+          <button
+            id="mobile-menu-button"
+            className="group h-full cursor-pointer"
+            onClick={handleMobileButtonPress}
+          >
+            <div className="relative top-0 h-1 w-8 rounded-full bg-black transition-all group-open:top-2 group-open:rotate-45"></div>
+            <div className="mt-1 h-1 w-8 rounded-full bg-black opacity-100 transition-all group-open:opacity-0"></div>
+            <div className="relative top-0 mt-1 h-1 w-8 rounded-full bg-black transition-all group-open:-top-2 group-open:-rotate-45"></div>
+          </button>
+
+          {/* Aside menu */}
+          {isMobileMenuOpen === true ? (
+            <MobileNavMenu isPageScrolled={isPageScrolled} />
+          ) : null}
+        </div>
 
         {/* ===================== Desktop Login/Sign up buttons ===================== */}
         <div
