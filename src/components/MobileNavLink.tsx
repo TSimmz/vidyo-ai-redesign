@@ -18,7 +18,6 @@ const MobileNavLink: React.FC<IMobileNavLink> = ({ link }) => {
 
   return (
     <li
-      key={link.id}
       className="group relative flex h-full w-full flex-col items-start border-b-2 border-zinc-200 px-3 py-3 transition-colors duration-[250ms] ease-in-out marker:text-lg"
       onClick={handleListItemClick}
     >

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { navLinks } from '~/utils/constants';
 import { DesktopNavItem, MobileNavMenu } from '~/components';
 import { useMobileState, usePageScrolled } from '~/utils/hooks';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface IHeader extends React.PropsWithChildren<any> {}
 
@@ -84,9 +84,11 @@ const Header: React.FC<IHeader> = () => {
           </button>
 
           {/* Aside menu */}
-          {isMobileMenuOpen === true ? (
-            <MobileNavMenu isPageScrolled={isPageScrolled} />
-          ) : null}
+          <AnimatePresence>
+            {isMobileMenuOpen === true ? (
+              <MobileNavMenu isPageScrolled={isPageScrolled} />
+            ) : null}
+          </AnimatePresence>
         </div>
 
         {/* ===================== Desktop Login/Sign up buttons ===================== */}

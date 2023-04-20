@@ -9,12 +9,33 @@ interface IMobileNavMenu {
 
 const MobileNavMenu: React.FC<IMobileNavMenu> = ({ isPageScrolled }) => {
   return (
-    <aside
+    <motion.aside
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.2 } }}
+      exit={{ opacity: 0, transition: { duration: 0.2, delay: 0.1 } }}
       className={`absolute right-[-20px] top-[calc(100%-1px)] z-10 flex justify-end ${
         isPageScrolled ? 'h-[calc(100vh-3rem+1px)]' : 'h-[calc(100vh-4rem+1px)]'
       } w-screen overflow-hidden bg-zinc-600/50`}
     >
-      <div
+      <motion.div
+        initial={{ clipPath: 'inset(0% 0% 0% 100%)' }}
+        animate={{
+          clipPath: 'inset(0% 0% 0% 0%)',
+          transition: {
+            type: 'spring',
+            bounce: 0,
+            duration: 0.3,
+            delay: 0.1,
+          },
+        }}
+        exit={{
+          clipPath: 'inset(0% 0% 0% 100%)',
+          transition: {
+            type: 'spring',
+            bounce: 0,
+            duration: 0.3,
+          },
+        }}
         className={`relative h-full w-[80vw] overflow-hidden bg-white sm:w-[60vw]`}
       >
         <ul
@@ -22,7 +43,7 @@ const MobileNavMenu: React.FC<IMobileNavMenu> = ({ isPageScrolled }) => {
           className="flex w-full flex-col items-center font-semibold"
         >
           {navLinks.map((link) => (
-            <MobileNavLink link={link} />
+            <MobileNavLink key={link.id} link={link} />
           ))}
         </ul>
         <div className="absolute bottom-0 flex w-full justify-between border-t-2 border-zinc-200 font-semibold">
@@ -50,8 +71,8 @@ const MobileNavMenu: React.FC<IMobileNavMenu> = ({ isPageScrolled }) => {
             </button>
           </div>
         </div>
-      </div>
-    </aside>
+      </motion.div>
+    </motion.aside>
   );
 };
 
