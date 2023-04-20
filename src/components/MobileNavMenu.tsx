@@ -10,7 +10,7 @@ interface IMobileNavMenu {
 const MobileNavMenu: React.FC<IMobileNavMenu> = ({ isPageScrolled }) => {
   return (
     <aside
-      className={`absolute left-[-20px] top-[calc(100%-1px)] z-10 ${
+      className={`absolute right-[-20px] top-[calc(100%-1px)] z-10 flex justify-end ${
         isPageScrolled ? 'h-[calc(100vh-3rem+1px)]' : 'h-[calc(100vh-4rem+1px)]'
       } w-screen overflow-hidden bg-zinc-600/50`}
     >
